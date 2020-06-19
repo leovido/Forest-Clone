@@ -7,15 +7,33 @@
 //
 
 import UIKit
+import UserNotifications
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .badge, .sound])
+    }
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        registerNotifications(application)
+
         return true
+    }
+
+    func registerNotifications(_ application: UIApplication) {
+
+        let authOptions: UNAuthorizationOptions = [.alert, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(
+            options: authOptions,
+            completionHandler: {_, _ in })
+
+        UNUserNotificationCenter.current().delegate = self
+
     }
 
     // MARK: UISceneSession Lifecycle

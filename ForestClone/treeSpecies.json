@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Tree",
+        "description": "Description",
+        "image": "imageName",
+        "cost": 2000,
+        "states": [
+            {
+                "image": "image-1",
+                "time": "10-55"
+            },
+            {
+                "image": "image-2",
+                "time": "60"
+            },
+            {
+                "image": "image-3",
+                "time": "90"
+            },
+            {
+                "image": "image-4",
+                "time": "120"
+            }
+        ]
+    }
+]

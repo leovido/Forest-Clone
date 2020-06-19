@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Novice Planter",
+        "description": "Total focused time reaches 4 hours",
+        "image": "",
+        "cost": 200
+    },
+    {
+        "name": "Apprentice Planter",
+        "description": "Total focused time reaches 3 days",
+        "image": "",
+        "cost": 300
+    },
+    {
+        "name": "Adept Planter",
+        "description": "Total focused time reaches 7 days",
+        "image": "",
+        "cost": 400
+    },
+    {
+        "name": "Expert Planter",
+        "description": "Total focused time reaches 15 days",
+        "image": "",
+        "cost": 500
+    }
+]

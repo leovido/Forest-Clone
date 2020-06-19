@@ -1,0 +1,20 @@
+PODS:
+  - MSCircularSlider (1.3.2)
+  - SideMenu (6.4.8)
+
+DEPENDENCIES:
+  - MSCircularSlider
+  - SideMenu
+
+SPEC REPOS:
+  trunk:
+    - MSCircularSlider
+    - SideMenu
+
+SPEC CHECKSUMS:
+  MSCircularSlider: 07fe922e6a7e05fb67e876d449e365327fdad3d1
+  SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
+
+PODFILE CHECKSUM: c6953aee17e362ace75c10d2c3879ca22d704abc
+
+COCOAPODS: 1.9.1
