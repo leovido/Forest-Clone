@@ -3,7 +3,7 @@
 //  ForestClone
 //
 //  Created by Christian Leovido on 18/06/2020.
-//  Copyright © 2020 Accent IT Services. All rights reserved.
+//  Copyright © 2020 Christian Leovido. All rights reserved.
 //
 
 import UIKit

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1874F5AA2A91FC97831E3DE5 /* Pods_ForestCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03DAC2CBEC4C89EE6B79677 /* Pods_ForestCloneTests.framework */; };
 		2D2261D6249B6D5500DCDB5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2261D5249B6D5500DCDB5D /* AppDelegate.swift */; };
 		2D2261D8249B6D5500DCDB5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2261D7249B6D5500DCDB5D /* SceneDelegate.swift */; };
 		2D2261DA249B6D5500DCDB5D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2261D9249B6D5500DCDB5D /* HomeViewController.swift */; };
@@ -14,6 +15,7 @@
 		2D2261DF249B6D5A00DCDB5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D2261DE249B6D5A00DCDB5D /* Assets.xcassets */; };
 		2D2261E2249B6D5A00DCDB5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D2261E0249B6D5A00DCDB5D /* LaunchScreen.storyboard */; };
 		2D2261ED249B6D5A00DCDB5D /* ForestCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2261EC249B6D5A00DCDB5D /* ForestCloneTests.swift */; };
+		2D38CF7F24A0E02300737F79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D38CF7E24A0E02300737F79 /* ViewController.swift */; };
 		2D3DD329249B9E3200383F23 /* FocusSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DD328249B9E3200383F23 /* FocusSession.swift */; };
 		2D3DD32B249B9E6B00383F23 /* Phrases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DD32A249B9E6B00383F23 /* Phrases.swift */; };
 		2D3DD32D249BBA3800383F23 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DD32C249BBA3800383F23 /* User.swift */; };
@@ -31,8 +33,7 @@
 		2D91B36E249CCC7200215756 /* ForestAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91B36D249CCC7200215756 /* ForestAlert.swift */; };
 		2D91B370249CCE9F00215756 /* TreeSpecimen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91B36F249CCE9F00215756 /* TreeSpecimen.swift */; };
 		2D91B372249CD56600215756 /* treeSpecies.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D91B371249CD56600215756 /* treeSpecies.json */; };
-		311EEC3C91C7DA0EEBF67C6E /* Pods_ForestClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8053EBA13D4CF554A3572E2E /* Pods_ForestClone.framework */; };
-		B1495B51A2847896EB8BF5CC /* Pods_ForestCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4B08DFE8B31FA980C5F824 /* Pods_ForestCloneTests.framework */; };
+		50667A3D345E62B16C36C7B2 /* Pods_ForestClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79CEFB2D34116831DB2A2D5 /* Pods_ForestClone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		2D2261E8249B6D5A00DCDB5D /* ForestCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForestCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2261EC249B6D5A00DCDB5D /* ForestCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestCloneTests.swift; sourceTree = "<group>"; };
 		2D2261EE249B6D5A00DCDB5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D38CF7E24A0E02300737F79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2D3DD328249B9E3200383F23 /* FocusSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSession.swift; sourceTree = "<group>"; };
 		2D3DD32A249B9E6B00383F23 /* Phrases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phrases.swift; sourceTree = "<group>"; };
 		2D3DD32C249BBA3800383F23 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -74,12 +76,12 @@
 		2D91B36D249CCC7200215756 /* ForestAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestAlert.swift; sourceTree = "<group>"; };
 		2D91B36F249CCE9F00215756 /* TreeSpecimen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeSpecimen.swift; sourceTree = "<group>"; };
 		2D91B371249CD56600215756 /* treeSpecies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = treeSpecies.json; sourceTree = "<group>"; };
-		8053EBA13D4CF554A3572E2E /* Pods_ForestClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForestClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B602F2BEE6540EE2F441BFAB /* Pods-ForestCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForestCloneTests.release.xcconfig"; path = "Target Support Files/Pods-ForestCloneTests/Pods-ForestCloneTests.release.xcconfig"; sourceTree = "<group>"; };
-		C172126848B250C1B4547C4D /* Pods-ForestClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForestClone.release.xcconfig"; path = "Target Support Files/Pods-ForestClone/Pods-ForestClone.release.xcconfig"; sourceTree = "<group>"; };
-		DDCB9D1E4BCFF7A6AF5091D6 /* Pods-ForestCloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForestCloneTests.debug.xcconfig"; path = "Target Support Files/Pods-ForestCloneTests/Pods-ForestCloneTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EF4B08DFE8B31FA980C5F824 /* Pods_ForestCloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForestCloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F757C983E0F32BAB580C1A88 /* Pods-ForestClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForestClone.debug.xcconfig"; path = "Target Support Files/Pods-ForestClone/Pods-ForestClone.debug.xcconfig"; sourceTree = "<group>"; };
+		314E19A91BADC8A6D9B9FC92 /* Pods-ForestClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForestClone.release.xcconfig"; path = "Target Support Files/Pods-ForestClone/Pods-ForestClone.release.xcconfig"; sourceTree = "<group>"; };
+		A3DA34ED50EAC465CAB8CB1F /* Pods-ForestClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForestClone.debug.xcconfig"; path = "Target Support Files/Pods-ForestClone/Pods-ForestClone.debug.xcconfig"; sourceTree = "<group>"; };
+		B03DAC2CBEC4C89EE6B79677 /* Pods_ForestCloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForestCloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1850711701BB53BBB305A79 /* Pods-ForestCloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForestCloneTests.debug.xcconfig"; path = "Target Support Files/Pods-ForestCloneTests/Pods-ForestCloneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E79CEFB2D34116831DB2A2D5 /* Pods_ForestClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForestClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBD20BFB2DBD6E2882F64D36 /* Pods-ForestCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForestCloneTests.release.xcconfig"; path = "Target Support Files/Pods-ForestCloneTests/Pods-ForestCloneTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				311EEC3C91C7DA0EEBF67C6E /* Pods_ForestClone.framework in Frameworks */,
+				50667A3D345E62B16C36C7B2 /* Pods_ForestClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1495B51A2847896EB8BF5CC /* Pods_ForestCloneTests.framework in Frameworks */,
+				1874F5AA2A91FC97831E3DE5 /* Pods_ForestCloneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +111,7 @@
 				2D2261EB249B6D5A00DCDB5D /* ForestCloneTests */,
 				2D2261D3249B6D5500DCDB5D /* Products */,
 				B5270B8E76E284BE9886F26E /* Pods */,
-				EFB95B87B5105E6B11737805 /* Frameworks */,
+				89AD0C2670930E0E104315C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,30 +182,31 @@
 			isa = PBXGroup;
 			children = (
 				2D2261D9249B6D5500DCDB5D /* HomeViewController.swift */,
+				2D38CF7E24A0E02300737F79 /* ViewController.swift */,
 				2D3DD338249BD03D00383F23 /* AchievementsTableViewController.swift */,
 				2D91B367249C0C7800215756 /* MenuTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		89AD0C2670930E0E104315C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E79CEFB2D34116831DB2A2D5 /* Pods_ForestClone.framework */,
+				B03DAC2CBEC4C89EE6B79677 /* Pods_ForestCloneTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B5270B8E76E284BE9886F26E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F757C983E0F32BAB580C1A88 /* Pods-ForestClone.debug.xcconfig */,
-				C172126848B250C1B4547C4D /* Pods-ForestClone.release.xcconfig */,
-				DDCB9D1E4BCFF7A6AF5091D6 /* Pods-ForestCloneTests.debug.xcconfig */,
-				B602F2BEE6540EE2F441BFAB /* Pods-ForestCloneTests.release.xcconfig */,
+				A3DA34ED50EAC465CAB8CB1F /* Pods-ForestClone.debug.xcconfig */,
+				314E19A91BADC8A6D9B9FC92 /* Pods-ForestClone.release.xcconfig */,
+				B1850711701BB53BBB305A79 /* Pods-ForestCloneTests.debug.xcconfig */,
+				FBD20BFB2DBD6E2882F64D36 /* Pods-ForestCloneTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		EFB95B87B5105E6B11737805 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8053EBA13D4CF554A3572E2E /* Pods_ForestClone.framework */,
-				EF4B08DFE8B31FA980C5F824 /* Pods_ForestCloneTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,11 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D2261F1249B6D5A00DCDB5D /* Build configuration list for PBXNativeTarget "ForestClone" */;
 			buildPhases = (
-				677562029F30883C31806099 /* [CP] Check Pods Manifest.lock */,
+				5DA14795420D2F92481CDC4E /* [CP] Check Pods Manifest.lock */,
 				2D2261CE249B6D5500DCDB5D /* Sources */,
 				2D2261CF249B6D5500DCDB5D /* Frameworks */,
 				2D2261D0249B6D5500DCDB5D /* Resources */,
-				E28D3C0F9402A81F0DF5FB1D /* [CP] Embed Pods Frameworks */,
+				60F059B2CA79475E3C01EA4B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,7 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D2261F4249B6D5A00DCDB5D /* Build configuration list for PBXNativeTarget "ForestCloneTests" */;
 			buildPhases = (
-				4CB2DF511E3C159AB3B8F373 /* [CP] Check Pods Manifest.lock */,
+				4C73CFD1BB0C57F9A0562402 /* [CP] Check Pods Manifest.lock */,
 				2D2261E4249B6D5A00DCDB5D /* Sources */,
 				2D2261E5249B6D5A00DCDB5D /* Frameworks */,
 				2D2261E6249B6D5A00DCDB5D /* Resources */,
@@ -308,7 +311,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4CB2DF511E3C159AB3B8F373 /* [CP] Check Pods Manifest.lock */ = {
+		4C73CFD1BB0C57F9A0562402 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -330,7 +333,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		677562029F30883C31806099 /* [CP] Check Pods Manifest.lock */ = {
+		5DA14795420D2F92481CDC4E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,7 +355,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E28D3C0F9402A81F0DF5FB1D /* [CP] Embed Pods Frameworks */ = {
+		60F059B2CA79475E3C01EA4B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -377,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D3DD331249BBBE600383F23 /* ColorScheme.swift in Sources */,
+				2D38CF7F24A0E02300737F79 /* ViewController.swift in Sources */,
 				2D3DD33B249BD0C900383F23 /* Achievements.swift in Sources */,
 				2D2261DA249B6D5500DCDB5D /* HomeViewController.swift in Sources */,
 				2D3DD33F249BD5C600383F23 /* AchievementTableViewCell.swift in Sources */,
@@ -551,7 +555,7 @@
 		};
 		2D2261F2249B6D5A00DCDB5D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F757C983E0F32BAB580C1A88 /* Pods-ForestClone.debug.xcconfig */;
+			baseConfigurationReference = A3DA34ED50EAC465CAB8CB1F /* Pods-ForestClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -561,7 +565,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = accentitservices.ForestClone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.christianleovido.ForestClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -570,7 +574,7 @@
 		};
 		2D2261F3249B6D5A00DCDB5D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C172126848B250C1B4547C4D /* Pods-ForestClone.release.xcconfig */;
+			baseConfigurationReference = 314E19A91BADC8A6D9B9FC92 /* Pods-ForestClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -580,7 +584,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = accentitservices.ForestClone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.christianleovido.ForestClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -589,7 +593,7 @@
 		};
 		2D2261F5249B6D5A00DCDB5D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DDCB9D1E4BCFF7A6AF5091D6 /* Pods-ForestCloneTests.debug.xcconfig */;
+			baseConfigurationReference = B1850711701BB53BBB305A79 /* Pods-ForestCloneTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -612,7 +616,7 @@
 		};
 		2D2261F6249B6D5A00DCDB5D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B602F2BEE6540EE2F441BFAB /* Pods-ForestCloneTests.release.xcconfig */;
+			baseConfigurationReference = FBD20BFB2DBD6E2882F64D36 /* Pods-ForestCloneTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
