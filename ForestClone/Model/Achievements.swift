@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Achievement: Decodable {
+struct Achievement: Codable {
     let name: String
     let description: String
     let image: String

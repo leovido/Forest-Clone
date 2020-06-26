@@ -10,7 +10,7 @@ import Foundation
 
 typealias Minutes = Int
 
-struct TreeSpecimen: Decodable {
+struct TreeSpecimen: Codable {
     let name: String
     let description: String
     let cost: Int

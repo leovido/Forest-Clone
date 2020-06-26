@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User {
+struct User: Codable {
     let name: String
     let coins: [Coin]
     let boost: Bool

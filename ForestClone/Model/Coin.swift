@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Coin {
+struct Coin: Codable {
     let amount: Int
 }
