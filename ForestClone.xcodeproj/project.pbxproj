@@ -12,6 +12,12 @@
 		2D049D2A24A40B9300E8F1B8 /* FirebaseFocusSessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D049D2924A40B9300E8F1B8 /* FirebaseFocusSessionStorage.swift */; };
 		2D049D2D24A4F62000E8F1B8 /* NetworkingRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D049D2C24A4F62000E8F1B8 /* NetworkingRequestable.swift */; };
 		2D049D2F24A4F7FC00E8F1B8 /* GenericFirebaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D049D2E24A4F7FC00E8F1B8 /* GenericFirebaseStorage.swift */; };
+		2D22205824A65C6C0069100C /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22205724A65C6C0069100C /* ChartView.swift */; };
+		2D22205B24A65D0C0069100C /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22205A24A65D0C0069100C /* PieChartView.swift */; };
+		2D22205D24A65E3F0069100C /* ForestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22205C24A65E3F0069100C /* ForestViewController.swift */; };
+		2D22206024A67F960069100C /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22205F24A67F960069100C /* BalloonMarker.swift */; };
+		2D22206224A681E40069100C /* XYMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22206124A681E40069100C /* XYMarkerView.swift */; };
+		2D22206624A6896F0069100C /* BarChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22206524A6896F0069100C /* BarChartCell.swift */; };
 		2D2261D6249B6D5500DCDB5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2261D5249B6D5500DCDB5D /* AppDelegate.swift */; };
 		2D2261D8249B6D5500DCDB5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2261D7249B6D5500DCDB5D /* SceneDelegate.swift */; };
 		2D2261DA249B6D5500DCDB5D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2261D9249B6D5500DCDB5D /* HomeViewController.swift */; };
@@ -59,6 +65,12 @@
 		2D049D2924A40B9300E8F1B8 /* FirebaseFocusSessionStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFocusSessionStorage.swift; sourceTree = "<group>"; };
 		2D049D2C24A4F62000E8F1B8 /* NetworkingRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingRequestable.swift; sourceTree = "<group>"; };
 		2D049D2E24A4F7FC00E8F1B8 /* GenericFirebaseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericFirebaseStorage.swift; sourceTree = "<group>"; };
+		2D22205724A65C6C0069100C /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		2D22205A24A65D0C0069100C /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		2D22205C24A65E3F0069100C /* ForestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestViewController.swift; sourceTree = "<group>"; };
+		2D22205F24A67F960069100C /* BalloonMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
+		2D22206124A681E40069100C /* XYMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYMarkerView.swift; sourceTree = "<group>"; };
+		2D22206524A6896F0069100C /* BarChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartCell.swift; sourceTree = "<group>"; };
 		2D2261D2249B6D5500DCDB5D /* ForestClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForestClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2261D5249B6D5500DCDB5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D2261D7249B6D5500DCDB5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +149,31 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		2D22205924A65D000069100C /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				2D22205724A65C6C0069100C /* ChartView.swift */,
+				2D22205A24A65D0C0069100C /* PieChartView.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		2D22205E24A67F8A0069100C /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				2D22205F24A67F960069100C /* BalloonMarker.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		2D22206424A6820A0069100C /* CustomChartViews */ = {
+			isa = PBXGroup;
+			children = (
+				2D22206124A681E40069100C /* XYMarkerView.swift */,
+			);
+			path = CustomChartViews;
+			sourceTree = "<group>";
+		};
 		2D2261C9249B6D5500DCDB5D = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +197,7 @@
 		2D2261D4249B6D5500DCDB5D /* ForestClone */ = {
 			isa = PBXGroup;
 			children = (
+				2D22205E24A67F8A0069100C /* Charts */,
 				2D049D2B24A4F5F400E8F1B8 /* Protocols */,
 				2D049D2824A40A2000E8F1B8 /* Storage */,
 				2D3DD327249B9E1F00383F23 /* Model */,
@@ -209,9 +247,12 @@
 		2D3DD336249BC91D00383F23 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2D22206424A6820A0069100C /* CustomChartViews */,
 				2D3DD33E249BD5C600383F23 /* AchievementTableViewCell.swift */,
 				2D3DD334249BC91600383F23 /* RoundedView.swift */,
 				2D91B36B249C0EE200215756 /* MenuCellTableViewCell.swift */,
+				2D22205924A65D000069100C /* Charts */,
+				2D22206524A6896F0069100C /* BarChartCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,6 +264,7 @@
 				2D38CF7E24A0E02300737F79 /* ViewController.swift */,
 				2D3DD338249BD03D00383F23 /* AchievementsTableViewController.swift */,
 				2D91B367249C0C7800215756 /* MenuTableViewController.swift */,
+				2D22205C24A65E3F0069100C /* ForestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -444,6 +486,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D22205B24A65D0C0069100C /* PieChartView.swift in Sources */,
+				2D22206224A681E40069100C /* XYMarkerView.swift in Sources */,
 				2DBC883424A6388F00D8DE12 /* TreeSpecimentManager.swift in Sources */,
 				2D3DD331249BBBE600383F23 /* ColorScheme.swift in Sources */,
 				2D38CF7F24A0E02300737F79 /* ViewController.swift in Sources */,
@@ -452,6 +496,7 @@
 				2D2261DA249B6D5500DCDB5D /* HomeViewController.swift in Sources */,
 				2D3DD33F249BD5C600383F23 /* AchievementTableViewCell.swift in Sources */,
 				2D3DD329249B9E3200383F23 /* FocusSession.swift in Sources */,
+				2D22206024A67F960069100C /* BalloonMarker.swift in Sources */,
 				2DBC883224A625BD00D8DE12 /* AppSession.swift in Sources */,
 				2D91B370249CCE9F00215756 /* TreeSpecimen.swift in Sources */,
 				2D3DD32D249BBA3800383F23 /* User.swift in Sources */,
@@ -461,12 +506,15 @@
 				2D049D2A24A40B9300E8F1B8 /* FirebaseFocusSessionStorage.swift in Sources */,
 				2DBC883824A63D5D00D8DE12 /* Home+Extension+Slider.swift in Sources */,
 				2D91B368249C0C7800215756 /* MenuTableViewController.swift in Sources */,
+				2D22206624A6896F0069100C /* BarChartCell.swift in Sources */,
 				2D91B36A249C0D1500215756 /* MenuItem.swift in Sources */,
 				2D2261D6249B6D5500DCDB5D /* AppDelegate.swift in Sources */,
 				2D91B36E249CCC7200215756 /* ForestAlert.swift in Sources */,
 				2D2261D8249B6D5500DCDB5D /* SceneDelegate.swift in Sources */,
 				2D3DD335249BC91600383F23 /* RoundedView.swift in Sources */,
+				2D22205D24A65E3F0069100C /* ForestViewController.swift in Sources */,
 				2D049D2D24A4F62000E8F1B8 /* NetworkingRequestable.swift in Sources */,
+				2D22205824A65C6C0069100C /* ChartView.swift in Sources */,
 				2D3DD32F249BBA4F00383F23 /* Coin.swift in Sources */,
 				2D91B36C249C0EE200215756 /* MenuCellTableViewCell.swift in Sources */,
 				2D3DD339249BD03D00383F23 /* AchievementsTableViewController.swift in Sources */,
