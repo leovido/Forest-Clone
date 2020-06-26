@@ -9,14 +9,32 @@
 import Foundation
 
 typealias Seconds = Int
+typealias FocusSessionId = String
 
-struct FocusSession {
-    var tree: TreeSpecimen = TreeSpecimen(name: "tree",
-                                          description: "Some description",
-                                          cost: 0,
-                                          image: "tree-1",
-                                          states: [])
-    var sessionStarted: Bool = false
+struct FocusSession: Codable {
+
+    enum FocusSesionStatus: String, Codable {
+        case idle
+        case started
+        case completed
+        case cancelled
+    }
+
+    let id: FocusSessionId = UUID().uuidString
+    var treeId: TreeId = ""
+    var status: FocusSesionStatus
     var time: Seconds = 600
-    let date: Date = Date()
+    var date: Date = Date()
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case status
+        case time
+        case date
+        case treeId
+    }
+
 }
+
+// Decodable: JSON -> FocusSession
+// Encodable: FocusSession -> JSON
