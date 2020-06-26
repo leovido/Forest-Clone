@@ -9,9 +9,10 @@
 import Foundation
 
 struct User: Codable {
+    let id: String
     let name: String
     let coins: [Coin]
-    let boost: Bool
     let achievements: [Achievement]
-    let completedSessions: [FocusSession]
+    let currentSession: FocusSession?
+    var completedSessions: [FocusSession]
 }
