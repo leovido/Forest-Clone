@@ -1,4 +1,7 @@
 PODS:
+  - Charts (3.5.0):
+    - Charts/Core (= 3.5.0)
+  - Charts/Core (3.5.0)
   - CodableFirebase (0.2.1)
   - Firebase/Analytics (6.23.0):
     - Firebase/Core
@@ -78,17 +81,21 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
+  - SCLAlertView (0.8)
   - SideMenu (6.4.8)
 
 DEPENDENCIES:
+  - Charts
   - CodableFirebase
   - Firebase/Analytics
   - Firebase/Database
   - MSCircularSlider
+  - SCLAlertView
   - SideMenu
 
 SPEC REPOS:
   trunk:
+    - Charts
     - CodableFirebase
     - Firebase
     - FirebaseAnalytics
@@ -106,9 +113,11 @@ SPEC REPOS:
     - MSCircularSlider
     - nanopb
     - PromisesObjC
+    - SCLAlertView
     - SideMenu
 
 SPEC CHECKSUMS:
+  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
   CodableFirebase: 0bf201991eeec35eb9fcd987d271ea463cf34a80
   Firebase: 585ae467b3edda6a5444e788fda6888f024d8d6f
   FirebaseAnalytics: 558f7a03d19de451093032c806f39d5f9dff096e
@@ -126,8 +135,9 @@ SPEC CHECKSUMS:
   MSCircularSlider: 07fe922e6a7e05fb67e876d449e365327fdad3d1
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
 
-PODFILE CHECKSUM: 7675645dda6ba11af8515b27dffde1912bc9ef2f
+PODFILE CHECKSUM: 67a8e6a7001e0dde5321a5d2bf51b7d8b346ceae
 
 COCOAPODS: 1.9.1

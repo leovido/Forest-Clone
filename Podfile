@@ -13,6 +13,9 @@ target 'ForestClone' do
   pod 'Firebase/Database'
   pod 'CodableFirebase'
 
+  pod 'SCLAlertView'
+  pod 'Charts'
+  
   target 'ForestCloneTests' do
     inherit! :search_paths
     # Pods for testing
