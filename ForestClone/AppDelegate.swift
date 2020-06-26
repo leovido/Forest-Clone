@@ -12,6 +12,15 @@ import Firebase
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+
+        if notification.request.content.title == "Session Success!" {
+            NotificationCenter.default.post(
+                Notification(name: Notification.Name("sessionFinished"),
+                             object: nil,
+                             userInfo: ["focusSessionId": notification.request.identifier])
+            )
+        }
+
         completionHandler([.alert, .badge, .sound])
     }
 }
