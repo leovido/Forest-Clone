@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1874F5AA2A91FC97831E3DE5 /* Pods_ForestCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03DAC2CBEC4C89EE6B79677 /* Pods_ForestCloneTests.framework */; };
+		2D049D2724A404B200E8F1B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D049D2624A404B100E8F1B8 /* GoogleService-Info.plist */; };
+		2D049D2A24A40B9300E8F1B8 /* FirebaseFocusSessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D049D2924A40B9300E8F1B8 /* FirebaseFocusSessionStorage.swift */; };
+		2D049D2D24A4F62000E8F1B8 /* NetworkingRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D049D2C24A4F62000E8F1B8 /* NetworkingRequestable.swift */; };
+		2D049D2F24A4F7FC00E8F1B8 /* GenericFirebaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D049D2E24A4F7FC00E8F1B8 /* GenericFirebaseStorage.swift */; };
 		2D2261D6249B6D5500DCDB5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2261D5249B6D5500DCDB5D /* AppDelegate.swift */; };
 		2D2261D8249B6D5500DCDB5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2261D7249B6D5500DCDB5D /* SceneDelegate.swift */; };
 		2D2261DA249B6D5500DCDB5D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2261D9249B6D5500DCDB5D /* HomeViewController.swift */; };
@@ -33,6 +37,10 @@
 		2D91B36E249CCC7200215756 /* ForestAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91B36D249CCC7200215756 /* ForestAlert.swift */; };
 		2D91B370249CCE9F00215756 /* TreeSpecimen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91B36F249CCE9F00215756 /* TreeSpecimen.swift */; };
 		2D91B372249CD56600215756 /* treeSpecies.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D91B371249CD56600215756 /* treeSpecies.json */; };
+		2DBC883224A625BD00D8DE12 /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC883124A625BD00D8DE12 /* AppSession.swift */; };
+		2DBC883424A6388F00D8DE12 /* TreeSpecimentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC883324A6388F00D8DE12 /* TreeSpecimentManager.swift */; };
+		2DBC883824A63D5D00D8DE12 /* Home+Extension+Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC883724A63D5D00D8DE12 /* Home+Extension+Slider.swift */; };
+		2DBC883A24A63E5E00D8DE12 /* Home+Extension+Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC883924A63E5E00D8DE12 /* Home+Extension+Database.swift */; };
 		50667A3D345E62B16C36C7B2 /* Pods_ForestClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79CEFB2D34116831DB2A2D5 /* Pods_ForestClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D049D2624A404B100E8F1B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2D049D2924A40B9300E8F1B8 /* FirebaseFocusSessionStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFocusSessionStorage.swift; sourceTree = "<group>"; };
+		2D049D2C24A4F62000E8F1B8 /* NetworkingRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingRequestable.swift; sourceTree = "<group>"; };
+		2D049D2E24A4F7FC00E8F1B8 /* GenericFirebaseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericFirebaseStorage.swift; sourceTree = "<group>"; };
 		2D2261D2249B6D5500DCDB5D /* ForestClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForestClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2261D5249B6D5500DCDB5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D2261D7249B6D5500DCDB5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +88,10 @@
 		2D91B36D249CCC7200215756 /* ForestAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestAlert.swift; sourceTree = "<group>"; };
 		2D91B36F249CCE9F00215756 /* TreeSpecimen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeSpecimen.swift; sourceTree = "<group>"; };
 		2D91B371249CD56600215756 /* treeSpecies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = treeSpecies.json; sourceTree = "<group>"; };
+		2DBC883124A625BD00D8DE12 /* AppSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
+		2DBC883324A6388F00D8DE12 /* TreeSpecimentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeSpecimentManager.swift; sourceTree = "<group>"; };
+		2DBC883724A63D5D00D8DE12 /* Home+Extension+Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Extension+Slider.swift"; sourceTree = "<group>"; };
+		2DBC883924A63E5E00D8DE12 /* Home+Extension+Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Extension+Database.swift"; sourceTree = "<group>"; };
 		314E19A91BADC8A6D9B9FC92 /* Pods-ForestClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForestClone.release.xcconfig"; path = "Target Support Files/Pods-ForestClone/Pods-ForestClone.release.xcconfig"; sourceTree = "<group>"; };
 		A3DA34ED50EAC465CAB8CB1F /* Pods-ForestClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForestClone.debug.xcconfig"; path = "Target Support Files/Pods-ForestClone/Pods-ForestClone.debug.xcconfig"; sourceTree = "<group>"; };
 		B03DAC2CBEC4C89EE6B79677 /* Pods_ForestCloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForestCloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +120,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D049D2824A40A2000E8F1B8 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				2D049D2924A40B9300E8F1B8 /* FirebaseFocusSessionStorage.swift */,
+				2D049D2E24A4F7FC00E8F1B8 /* GenericFirebaseStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		2D049D2B24A4F5F400E8F1B8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2D049D2C24A4F62000E8F1B8 /* NetworkingRequestable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		2D2261C9249B6D5500DCDB5D = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +160,8 @@
 		2D2261D4249B6D5500DCDB5D /* ForestClone */ = {
 			isa = PBXGroup;
 			children = (
+				2D049D2B24A4F5F400E8F1B8 /* Protocols */,
+				2D049D2824A40A2000E8F1B8 /* Storage */,
 				2D3DD327249B9E1F00383F23 /* Model */,
 				2D3DD336249BC91D00383F23 /* View */,
 				2D3DD337249BD01000383F23 /* Controller */,
@@ -137,6 +172,7 @@
 				2D2261E0249B6D5A00DCDB5D /* LaunchScreen.storyboard */,
 				2D2261E3249B6D5A00DCDB5D /* Info.plist */,
 				2D3DD33C249BD29500383F23 /* achievements.json */,
+				2D049D2624A404B100E8F1B8 /* GoogleService-Info.plist */,
 				2D91B371249CD56600215756 /* treeSpecies.json */,
 			);
 			path = ForestClone;
@@ -155,15 +191,17 @@
 			isa = PBXGroup;
 			children = (
 				2D3DD33A249BD0C900383F23 /* Achievements.swift */,
-				2D91B36F249CCE9F00215756 /* TreeSpecimen.swift */,
-				2D91B369249C0D1500215756 /* MenuItem.swift */,
 				2D3DD32E249BBA4F00383F23 /* Coin.swift */,
 				2D3DD330249BBBE600383F23 /* ColorScheme.swift */,
 				2D3DD328249B9E3200383F23 /* FocusSession.swift */,
+				2D91B36D249CCC7200215756 /* ForestAlert.swift */,
+				2D91B369249C0D1500215756 /* MenuItem.swift */,
 				2D3DD332249BC27200383F23 /* NotificationScheduler.swift */,
 				2D3DD32A249B9E6B00383F23 /* Phrases.swift */,
+				2D91B36F249CCE9F00215756 /* TreeSpecimen.swift */,
+				2DBC883324A6388F00D8DE12 /* TreeSpecimentManager.swift */,
 				2D3DD32C249BBA3800383F23 /* User.swift */,
-				2D91B36D249CCC7200215756 /* ForestAlert.swift */,
+				2DBC883024A625AE00D8DE12 /* AppSession */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,12 +219,38 @@
 		2D3DD337249BD01000383F23 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2D2261D9249B6D5500DCDB5D /* HomeViewController.swift */,
+				2DBC883524A63D3E00D8DE12 /* Home */,
 				2D38CF7E24A0E02300737F79 /* ViewController.swift */,
 				2D3DD338249BD03D00383F23 /* AchievementsTableViewController.swift */,
 				2D91B367249C0C7800215756 /* MenuTableViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		2DBC883024A625AE00D8DE12 /* AppSession */ = {
+			isa = PBXGroup;
+			children = (
+				2DBC883124A625BD00D8DE12 /* AppSession.swift */,
+			);
+			path = AppSession;
+			sourceTree = "<group>";
+		};
+		2DBC883524A63D3E00D8DE12 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2DBC883624A63D4C00D8DE12 /* Extensions */,
+				2D2261D9249B6D5500DCDB5D /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2DBC883624A63D4C00D8DE12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DBC883724A63D5D00D8DE12 /* Home+Extension+Slider.swift */,
+				2DBC883924A63E5E00D8DE12 /* Home+Extension+Database.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		89AD0C2670930E0E104315C1 /* Frameworks */ = {
@@ -298,6 +362,7 @@
 				2D3DD33D249BD29500383F23 /* achievements.json in Resources */,
 				2D2261DF249B6D5A00DCDB5D /* Assets.xcassets in Resources */,
 				2D2261DD249B6D5500DCDB5D /* Main.storyboard in Resources */,
+				2D049D2724A404B200E8F1B8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,22 +444,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DBC883424A6388F00D8DE12 /* TreeSpecimentManager.swift in Sources */,
 				2D3DD331249BBBE600383F23 /* ColorScheme.swift in Sources */,
 				2D38CF7F24A0E02300737F79 /* ViewController.swift in Sources */,
+				2DBC883A24A63E5E00D8DE12 /* Home+Extension+Database.swift in Sources */,
 				2D3DD33B249BD0C900383F23 /* Achievements.swift in Sources */,
 				2D2261DA249B6D5500DCDB5D /* HomeViewController.swift in Sources */,
 				2D3DD33F249BD5C600383F23 /* AchievementTableViewCell.swift in Sources */,
 				2D3DD329249B9E3200383F23 /* FocusSession.swift in Sources */,
+				2DBC883224A625BD00D8DE12 /* AppSession.swift in Sources */,
 				2D91B370249CCE9F00215756 /* TreeSpecimen.swift in Sources */,
 				2D3DD32D249BBA3800383F23 /* User.swift in Sources */,
 				2D3DD333249BC27200383F23 /* NotificationScheduler.swift in Sources */,
+				2D049D2F24A4F7FC00E8F1B8 /* GenericFirebaseStorage.swift in Sources */,
 				2D3DD32B249B9E6B00383F23 /* Phrases.swift in Sources */,
+				2D049D2A24A40B9300E8F1B8 /* FirebaseFocusSessionStorage.swift in Sources */,
+				2DBC883824A63D5D00D8DE12 /* Home+Extension+Slider.swift in Sources */,
 				2D91B368249C0C7800215756 /* MenuTableViewController.swift in Sources */,
 				2D91B36A249C0D1500215756 /* MenuItem.swift in Sources */,
 				2D2261D6249B6D5500DCDB5D /* AppDelegate.swift in Sources */,
 				2D91B36E249CCC7200215756 /* ForestAlert.swift in Sources */,
 				2D2261D8249B6D5500DCDB5D /* SceneDelegate.swift in Sources */,
 				2D3DD335249BC91600383F23 /* RoundedView.swift in Sources */,
+				2D049D2D24A4F62000E8F1B8 /* NetworkingRequestable.swift in Sources */,
 				2D3DD32F249BBA4F00383F23 /* Coin.swift in Sources */,
 				2D91B36C249C0EE200215756 /* MenuCellTableViewCell.swift in Sources */,
 				2D3DD339249BD03D00383F23 /* AchievementsTableViewController.swift in Sources */,
