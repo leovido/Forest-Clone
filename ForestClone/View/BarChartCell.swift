@@ -15,17 +15,10 @@ class BarChartCell: UITableViewCell {
 
     static let identifier = "BarChartCell"
 
-    var barChartView: BarChartView!
-    var dataLabels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    private var barChartView: BarChartView!
+    private var dataLabels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
-//    let completedSessions: [FocusSession] = AppSession.user.completedSessions
-    let completedSessions: [FocusSession] = [
-        FocusSession(treeId: "", status: .completed, time: Int.random(in: 600...7200), date: Date()),
-        FocusSession(treeId: "", status: .completed, time: Int.random(in: 600...7200), date: Date()),
-        FocusSession(treeId: "", status: .completed, time: Int.random(in: 600...7200), date: Date()),
-        FocusSession(treeId: "", status: .completed, time: Int.random(in: 600...7200), date: Date()),
-        FocusSession(treeId: "", status: .completed, time: Int.random(in: 600...7200), date: Date())
-    ]
+    private var completedSessions: [FocusSession] = []
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,8 +32,8 @@ class BarChartCell: UITableViewCell {
 
     }
 
-    func configureCell() {
-        
+    func configureCell(completedSessions: [FocusSession]) {
+        self.completedSessions = completedSessions
     }
 
     private func configureBarChart() {
@@ -213,6 +206,8 @@ class BarChartCell: UITableViewCell {
         }
 
         addSubview(barChartView)
+
+        configureBarChartLayout()
 
     }
 
