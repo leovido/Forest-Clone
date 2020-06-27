@@ -8,6 +8,7 @@
 
 import UIKit
 import Charts
+import SceneKit
 
 enum DateDataType: String {
     case day
@@ -23,6 +24,14 @@ protocol BarChartDelegate: class {
 class ForestViewController: UIViewController {
 
     weak var barChartDelegate: BarChartDelegate?
+
+    let completedSessions: [FocusSession] = [
+        FocusSession(treeId: "", status: .completed, time: Int.random(in: 600...7200), date: Date(timeInterval: TimeInterval.random(in: 3600...1000000), since: Date())),
+        FocusSession(treeId: "", status: .completed, time: Int.random(in: 600...7200), date: Date(timeInterval: TimeInterval.random(in: 3600...1000000), since: Date())),
+        FocusSession(treeId: "", status: .completed, time: Int.random(in: 600...7200), date: Date(timeInterval: TimeInterval.random(in: 3600...1000000), since: Date())),
+        FocusSession(treeId: "", status: .completed, time: Int.random(in: 600...7200), date: Date(timeInterval: TimeInterval.random(in: 3600...1000000), since: Date())),
+        FocusSession(treeId: "", status: .completed, time: Int.random(in: 600...7200), date: Date(timeInterval: TimeInterval.random(in: 3600...1000000), since: Date()))
+    ]
 
     @IBOutlet weak var dateSegmentedControl: UISegmentedControl!
     @IBAction func dateSegmentedControl(_ sender: Any) {
@@ -66,13 +75,23 @@ extension ForestViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
+        if indexPath.row == 0 {
+
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ForestCanvasCell.identifier, for: indexPath) as? ForestCanvasCell else {
+                return UITableViewCell()
+            }
+
+            return cell
+            
+        }
+
         if indexPath.row == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: BarChartCell.identifier, for: indexPath) as? BarChartCell else {
                 return UITableViewCell()
             }
 
             barChartDelegate = cell
-            cell.configureCell()
+            cell.configureCell(completedSessions: completedSessions)
 
             return cell
             
@@ -82,8 +101,11 @@ extension ForestViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 1 {
-            return 500
+
+        if indexPath.row == 0 {
+            return 280
+        } else if indexPath.row == 1 {
+            return 300
         } else {
             return 10
         }
