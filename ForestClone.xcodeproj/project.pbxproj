@@ -47,6 +47,9 @@
 		2DBC883424A6388F00D8DE12 /* TreeSpecimentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC883324A6388F00D8DE12 /* TreeSpecimentManager.swift */; };
 		2DBC883824A63D5D00D8DE12 /* Home+Extension+Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC883724A63D5D00D8DE12 /* Home+Extension+Slider.swift */; };
 		2DBC883A24A63E5E00D8DE12 /* Home+Extension+Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC883924A63E5E00D8DE12 /* Home+Extension+Database.swift */; };
+		2DC11D9424A75508003D8FA0 /* PieChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC11D9324A75508003D8FA0 /* PieChartCell.swift */; };
+		2DC11D9624A759FF003D8FA0 /* ForestCanvasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC11D9524A759FF003D8FA0 /* ForestCanvasCell.swift */; };
+		2DC11D9824A75C92003D8FA0 /* ForestCanvas.scn in Resources */ = {isa = PBXBuildFile; fileRef = 2DC11D9724A75C92003D8FA0 /* ForestCanvas.scn */; };
 		50667A3D345E62B16C36C7B2 /* Pods_ForestClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79CEFB2D34116831DB2A2D5 /* Pods_ForestClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +107,9 @@
 		2DBC883324A6388F00D8DE12 /* TreeSpecimentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeSpecimentManager.swift; sourceTree = "<group>"; };
 		2DBC883724A63D5D00D8DE12 /* Home+Extension+Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Extension+Slider.swift"; sourceTree = "<group>"; };
 		2DBC883924A63E5E00D8DE12 /* Home+Extension+Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Extension+Database.swift"; sourceTree = "<group>"; };
+		2DC11D9324A75508003D8FA0 /* PieChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartCell.swift; sourceTree = "<group>"; };
+		2DC11D9524A759FF003D8FA0 /* ForestCanvasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestCanvasCell.swift; sourceTree = "<group>"; };
+		2DC11D9724A75C92003D8FA0 /* ForestCanvas.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ForestCanvas.scn; sourceTree = "<group>"; };
 		314E19A91BADC8A6D9B9FC92 /* Pods-ForestClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForestClone.release.xcconfig"; path = "Target Support Files/Pods-ForestClone/Pods-ForestClone.release.xcconfig"; sourceTree = "<group>"; };
 		A3DA34ED50EAC465CAB8CB1F /* Pods-ForestClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForestClone.debug.xcconfig"; path = "Target Support Files/Pods-ForestClone/Pods-ForestClone.debug.xcconfig"; sourceTree = "<group>"; };
 		B03DAC2CBEC4C89EE6B79677 /* Pods_ForestCloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForestCloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,6 +259,9 @@
 				2D91B36B249C0EE200215756 /* MenuCellTableViewCell.swift */,
 				2D22205924A65D000069100C /* Charts */,
 				2D22206524A6896F0069100C /* BarChartCell.swift */,
+				2DC11D9724A75C92003D8FA0 /* ForestCanvas.scn */,
+				2DC11D9324A75508003D8FA0 /* PieChartCell.swift */,
+				2DC11D9524A759FF003D8FA0 /* ForestCanvasCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -403,6 +412,7 @@
 				2D91B372249CD56600215756 /* treeSpecies.json in Resources */,
 				2D3DD33D249BD29500383F23 /* achievements.json in Resources */,
 				2D2261DF249B6D5A00DCDB5D /* Assets.xcassets in Resources */,
+				2DC11D9824A75C92003D8FA0 /* ForestCanvas.scn in Resources */,
 				2D2261DD249B6D5500DCDB5D /* Main.storyboard in Resources */,
 				2D049D2724A404B200E8F1B8 /* GoogleService-Info.plist in Resources */,
 			);
@@ -492,6 +502,7 @@
 				2D3DD331249BBBE600383F23 /* ColorScheme.swift in Sources */,
 				2D38CF7F24A0E02300737F79 /* ViewController.swift in Sources */,
 				2DBC883A24A63E5E00D8DE12 /* Home+Extension+Database.swift in Sources */,
+				2DC11D9624A759FF003D8FA0 /* ForestCanvasCell.swift in Sources */,
 				2D3DD33B249BD0C900383F23 /* Achievements.swift in Sources */,
 				2D2261DA249B6D5500DCDB5D /* HomeViewController.swift in Sources */,
 				2D3DD33F249BD5C600383F23 /* AchievementTableViewCell.swift in Sources */,
@@ -512,6 +523,7 @@
 				2D91B36E249CCC7200215756 /* ForestAlert.swift in Sources */,
 				2D2261D8249B6D5500DCDB5D /* SceneDelegate.swift in Sources */,
 				2D3DD335249BC91600383F23 /* RoundedView.swift in Sources */,
+				2DC11D9424A75508003D8FA0 /* PieChartCell.swift in Sources */,
 				2D22205D24A65E3F0069100C /* ForestViewController.swift in Sources */,
 				2D049D2D24A4F62000E8F1B8 /* NetworkingRequestable.swift in Sources */,
 				2D22205824A65C6C0069100C /* ChartView.swift in Sources */,
