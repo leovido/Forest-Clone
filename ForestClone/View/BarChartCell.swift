@@ -9,14 +9,14 @@
 import UIKit
 import Charts
 
-extension BarChartCell: BarChartDelegate {}
+extension BarChartCell: ChartDelegate {}
 
 class BarChartCell: UITableViewCell {
 
     static let identifier = "BarChartCell"
 
     private var barChartView: BarChartView!
-    private var dataLabels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    private var dataLabels = [String]()
 
     private var completedSessions: [FocusSession] = []
 
@@ -24,7 +24,7 @@ class BarChartCell: UITableViewCell {
         super.awakeFromNib()
 
         configureBarChart()
-        configureBarChartLayout()
+        configureBarChartLayout(dateDataType: .day)
 
         addSubview(barChartView)
 
@@ -40,15 +40,23 @@ class BarChartCell: UITableViewCell {
         updateBarChartView(dateDataType: .day)
     }
 
-    private func configureBarChartLayout() {
+    private func configureBarChartLayout(dateDataType: DateDataType) {
 
         let xAxis = barChartView.xAxis
         xAxis.labelPosition = .bottom
         xAxis.labelFont = .systemFont(ofSize: 11)
         xAxis.drawAxisLineEnabled = false
         xAxis.labelTextColor = .white
-        xAxis.labelCount = 7
         xAxis.granularity = 1
+
+        switch dateDataType {
+            case .day, .month:
+            xAxis.labelCount = 5
+            case .week:
+            xAxis.labelCount = 7
+            case .year:
+            xAxis.labelCount = 12
+        }
 
         xAxis.valueFormatter = self
 
@@ -61,16 +69,6 @@ class BarChartCell: UITableViewCell {
         barChartView.doubleTapToZoomEnabled = false
         barChartView.animate(xAxisDuration: 1, yAxisDuration: 1)
 
-        let l = barChartView.legend
-        l.horizontalAlignment = .left
-        l.verticalAlignment = .bottom
-        l.orientation = .horizontal
-        l.drawInside = false
-        l.form = .circle
-        l.formSize = 9
-        l.font = UIFont(name: "HelveticaNeue-Light", size: 11)!
-        l.xEntrySpace = 4
-
         let marker = XYMarkerView(color: UIColor.gray,
                                   font: .systemFont(ofSize: 12),
                                   textColor: .white,
@@ -82,17 +80,17 @@ class BarChartCell: UITableViewCell {
 
     }
 
-    func generateDataSet(dateDataType: DateDataType, date: Date) -> Int {
+    func generateDataSet(dateDataType: DateDataType, date: Date) -> [String] {
 
         switch dateDataType {
         case .day:
-            return 24
+            return Array(0...23).map({ $0.description })
         case .month:
-            return date.getDaysInMonth()
+            return Array(1...date.getDaysInMonth()).map({ $0.description })
         case .week:
-            return 7
+            return ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
         case .year:
-            return 12
+            return Array(1...12).map({ $0.description })
         }
 
     }
@@ -150,7 +148,7 @@ class BarChartCell: UITableViewCell {
 
     }
 
-    func updateBarChartView(dateDataType: DateDataType) {
+    func setDataCount(dateDataType: DateDataType) -> [BarChartDataEntry] {
 
         var dataEntries: [BarChartDataEntry] = []
 
@@ -163,41 +161,49 @@ class BarChartCell: UITableViewCell {
                         time: $0.time)
         }
 
-        let xAxisValues = generateDataSet(dateDataType: dateDataType, date: Date())
+        dataLabels = generateDataSet(dateDataType: dateDataType, date: Date())
 
-        dataLabels = Array([0...xAxisValues].map({ $0.description }))
+        var timeCount = [Int]()
 
-        var visitorCounts = [Int]()
-
-        for i in 0..<xAxisValues {
+        for i in 0..<dataLabels.count {
 
             if let val = filteredSessionsByDateDataType.first(where: { $0.dateComponent == i }) {
-                visitorCounts.append(val.time)
+                timeCount.append(val.time)
             } else {
-                visitorCounts.append(0)
+                timeCount.append(0)
             }
         }
 
-
-        for i in 0..<visitorCounts.count {
+        for i in 0..<timeCount.count {
 
             let dataEntry = BarChartDataEntry(x: Double(i),
-                                              y: Double(visitorCounts[i]))
+                                              y: Double(timeCount[i]))
 
             dataEntries.append(dataEntry)
         }
 
-        let chartDataSet = BarChartDataSet(entries: dataEntries)
+        return dataEntries
+
+    }
+
+    func updateBarChartView(dateDataType: DateDataType) {
+
+        // 1. Create the entries, in this case, sessions logged from Firebase
+        let dataEntries = setDataCount(dateDataType: dateDataType)
+
+        // 2. Create a data set. This is the number of days, weeks, months, years displayed in the X Axis.
+        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "")
         chartDataSet.colors = [UIColor(red: 0.58, green: 0.81, blue: 0.07, alpha: 1.00)]
         chartDataSet.highlightColor = .white
 
+        // 3. Create the chart data with the data set above.
         let chartData = BarChartData(dataSet: chartDataSet)
         chartData.barWidth = 0.85
 
         let chart = BarChartView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: 300))
         chart.backgroundColor = .clear
         chart.data = chartData
-
+        chart.legend.enabled = false
 
         barChartView = chart
 
@@ -207,7 +213,7 @@ class BarChartCell: UITableViewCell {
 
         addSubview(barChartView)
 
-        configureBarChartLayout()
+        configureBarChartLayout(dateDataType: dateDataType)
 
     }
 
