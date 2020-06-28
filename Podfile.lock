@@ -83,6 +83,7 @@ PODS:
   - PromisesObjC (1.2.8)
   - SCLAlertView (0.8)
   - SideMenu (6.4.8)
+  - SwiftRandom (1.0.0)
 
 DEPENDENCIES:
   - Charts
@@ -92,6 +93,7 @@ DEPENDENCIES:
   - MSCircularSlider
   - SCLAlertView
   - SideMenu
+  - SwiftRandom
 
 SPEC REPOS:
   trunk:
@@ -115,6 +117,7 @@ SPEC REPOS:
     - PromisesObjC
     - SCLAlertView
     - SideMenu
+    - SwiftRandom
 
 SPEC CHECKSUMS:
   Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
@@ -137,7 +140,8 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
+  SwiftRandom: 437275c63500ddf5a565cbd56996fb23f12cfc3d
 
-PODFILE CHECKSUM: 67a8e6a7001e0dde5321a5d2bf51b7d8b346ceae
+PODFILE CHECKSUM: 55e96337357652592448df2272335cf4cb116f25
 
 COCOAPODS: 1.9.1

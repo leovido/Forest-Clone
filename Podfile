@@ -15,6 +15,8 @@ target 'ForestClone' do
 
   pod 'SCLAlertView'
   pod 'Charts'
+
+  pod  'SwiftRandom'
   
   target 'ForestCloneTests' do
     inherit! :search_paths
