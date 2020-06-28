@@ -10,6 +10,18 @@ import UIKit
 
 class MenuTableViewController: UITableViewController {
 
+    weak var homeDelegate: MenuSliderDelegate?
+
+    let menuOptions: [MenuItem] = [MenuItem(name: "Forest", image: "person"),
+                                   MenuItem(name: "Timeline", image: "person"),
+                                   MenuItem(name: "Tags", image: "person"),
+                                   MenuItem(name: "Friend", image: "person"),
+                                   MenuItem(name: "Achievements", image: "person"),
+                                   MenuItem(name: "Store", image: "person"),
+                                   MenuItem(name: "Real Forest", image: "person"),
+                                   MenuItem(name: "News", image: "news"),
+                                   MenuItem(name: "Settings", image: "gear")]
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -23,70 +35,33 @@ class MenuTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
+        return menuOptions.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: "MenuCell",
+            withIdentifier: MenuCellTableViewCell.identifier,
             for: indexPath
             ) as? MenuCellTableViewCell else {
                 return UITableViewCell()
         }
 
+        cell.menuItemLabel.text = menuOptions[indexPath.row].name
+        cell.menuItemImage.image = UIImage(systemName: menuOptions[indexPath.row].image)
+
         return cell
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        let segueName = menuOptions[indexPath.row].name.lowercased() + "Segue"
+
+        homeDelegate?.performSegue(with: segueName)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
