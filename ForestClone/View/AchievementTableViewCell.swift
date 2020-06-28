@@ -10,6 +10,8 @@ import UIKit
 
 class AchievementTableViewCell: UITableViewCell {
 
+    static let identifier = "AchievementCell"
+
     @IBOutlet weak var achievementImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!

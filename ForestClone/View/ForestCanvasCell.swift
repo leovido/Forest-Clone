@@ -31,24 +31,27 @@ class ForestCanvasCell: UITableViewCell {
         let scene = SCNScene()
         sceneView.scene = scene
 
+        // 2. Create a SCNCamera.
+        // This will render the position of the camera.
         let camera = SCNCamera()
         let cameraNode = SCNNode()
         cameraNode.camera = camera
         cameraNode.position = SCNVector3(x: 0.0, y: 0.0, z: 3.0)
 
+        // 3. SCNLight render the light on which to project on the object
         let light = SCNLight()
         light.type = SCNLight.LightType.omni
         let lightNode = SCNNode()
         lightNode.light = light
         lightNode.position = SCNVector3(x: 1.5, y: 1.5, z: 1.5)
 
-        let cubeGeometry = SCNBox(width: 2.5, height: 0.8, length: 2.5, chamferRadius: 0.0)
+        // 4. Create the box
+        let cubeGeometry = SCNBox(width: 2.5, height: 0.4, length: 2.5, chamferRadius: 0.0)
         let cubeNode = SCNNode(geometry: cubeGeometry)
 
         let redMaterial = SCNMaterial()
         redMaterial.diffuse.contents = UIColor.green
         cubeGeometry.materials = [redMaterial]
-
 
         scene.rootNode.addChildNode(lightNode)
         scene.rootNode.addChildNode(cameraNode)

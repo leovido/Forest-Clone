@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="ibn-Qb-nO0">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ibn-Qb-nO0">
                                 <rect key="frame" x="20" y="105" width="374" height="32"/>
                                 <color key="backgroundColor" red="0.092961184680461884" green="0.53988504409790039" blue="0.52338093519210815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
@@ -34,7 +34,7 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ForestCanvasCell" rowHeight="225" id="Zrj-A8-lLT" customClass="ForestCanvasCell" customModule="ForestClone" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ForestCanvasCell" rowHeight="225" id="Zrj-A8-lLT" customClass="ForestCanvasCell" customModule="ForestClone" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="225"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zrj-A8-lLT" id="0dl-DB-kFx">
@@ -43,7 +43,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.092961184680461884" green="0.53988504409790039" blue="0.52338093519210815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BarChartCell" rowHeight="235" id="neY-Ip-TDV" customClass="BarChartCell" customModule="ForestClone" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BarChartCell" rowHeight="235" id="neY-Ip-TDV" customClass="BarChartCell" customModule="ForestClone" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="253" width="414" height="235"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="neY-Ip-TDV" id="Fww-qu-YcH">
@@ -51,7 +51,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="230" id="d3e-Fj-xwK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PieChartCell" rowHeight="230" id="d3e-Fj-xwK" customClass="PieChartCell" customModule="ForestClone" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="488" width="414" height="230"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d3e-Fj-xwK" id="3sK-Q9-WwD">
@@ -189,58 +189,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmT-PK-QfD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="505.79710144927537" y="1926.5625"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="D20-AU-xLB">
-            <objects>
-                <viewController id="piR-o7-5J3" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UM9-oQ-nde">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IgG-sT-WHG">
-                                <rect key="frame" x="102" y="339" width="210" height="420"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IYf-ZJ-fk9">
-                                        <rect key="frame" x="0.0" y="0.0" width="210" height="210"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="210" id="iFD-wI-oDV"/>
-                                            <constraint firstAttribute="height" constant="210" id="wRa-HO-FCE"/>
-                                        </constraints>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0T-zk-aYM" customClass="MSCircularSlider">
-                                        <rect key="frame" x="0.0" y="210" width="210" height="210"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="210" id="Qag-Zu-s6U"/>
-                                            <constraint firstAttribute="height" constant="210" id="kpx-fG-Rm6"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="_maximumValue">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="y0T-zk-aYM" firstAttribute="top" secondItem="IYf-ZJ-fk9" secondAttribute="bottom" id="6Ay-8u-xU4"/>
-                                    <constraint firstItem="y0T-zk-aYM" firstAttribute="top" secondItem="IYf-ZJ-fk9" secondAttribute="bottom" id="BEm-kV-48T"/>
-                                    <constraint firstItem="IYf-ZJ-fk9" firstAttribute="top" secondItem="IgG-sT-WHG" secondAttribute="top" id="Bvo-g4-1Od"/>
-                                    <constraint firstItem="IYf-ZJ-fk9" firstAttribute="leading" secondItem="IgG-sT-WHG" secondAttribute="leading" id="NE5-I4-uW5"/>
-                                    <constraint firstAttribute="trailing" secondItem="IYf-ZJ-fk9" secondAttribute="trailing" id="V6f-4o-4PT"/>
-                                    <constraint firstItem="y0T-zk-aYM" firstAttribute="leading" secondItem="IgG-sT-WHG" secondAttribute="leading" id="Wpo-ff-69M"/>
-                                    <constraint firstAttribute="bottom" secondItem="y0T-zk-aYM" secondAttribute="bottom" id="fWS-gp-1jL"/>
-                                    <constraint firstAttribute="trailing" secondItem="y0T-zk-aYM" secondAttribute="trailing" id="zBp-Yh-Xsb"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="XJV-0b-fK9"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O8y-gx-Obk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1176.8115942028987" y="400.44642857142856"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="4tG-qg-zd2">
@@ -461,6 +409,10 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="menuItemImage" destination="mch-z8-qic" id="WDb-vb-QtD"/>
+                                    <outlet property="menuItemLabel" destination="jfS-S7-WQU" id="XPh-6G-80e"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -650,6 +602,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fhk-Zx-SIr" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="VM4-CQ-gaK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tvk-nr-cvL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

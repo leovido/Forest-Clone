@@ -47,6 +47,11 @@
 		2DBC883424A6388F00D8DE12 /* TreeSpecimentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC883324A6388F00D8DE12 /* TreeSpecimentManager.swift */; };
 		2DBC883824A63D5D00D8DE12 /* Home+Extension+Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC883724A63D5D00D8DE12 /* Home+Extension+Slider.swift */; };
 		2DBC883A24A63E5E00D8DE12 /* Home+Extension+Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC883924A63E5E00D8DE12 /* Home+Extension+Database.swift */; };
+		2DBE4B6024A7F664003E0F08 /* MenuSliderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE4B5F24A7F664003E0F08 /* MenuSliderDelegate.swift */; };
+		2DBE4B6524A8A2BA003E0F08 /* Forest+Extensions+RandomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE4B6424A8A2BA003E0F08 /* Forest+Extensions+RandomData.swift */; };
+		2DBE4B6724A8A2E5003E0F08 /* Forest+TableView+Delegate+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE4B6624A8A2E5003E0F08 /* Forest+TableView+Delegate+DataSource.swift */; };
+		2DBE4B6B24A8A8C0003E0F08 /* TagSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE4B6A24A8A8C0003E0F08 /* TagSession.swift */; };
+		2DBE4B6D24A8D629003E0F08 /* Home+Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE4B6C24A8D629003E0F08 /* Home+Slider.swift */; };
 		2DC11D9424A75508003D8FA0 /* PieChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC11D9324A75508003D8FA0 /* PieChartCell.swift */; };
 		2DC11D9624A759FF003D8FA0 /* ForestCanvasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC11D9524A759FF003D8FA0 /* ForestCanvasCell.swift */; };
 		2DC11D9824A75C92003D8FA0 /* ForestCanvas.scn in Resources */ = {isa = PBXBuildFile; fileRef = 2DC11D9724A75C92003D8FA0 /* ForestCanvas.scn */; };
@@ -107,6 +112,11 @@
 		2DBC883324A6388F00D8DE12 /* TreeSpecimentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeSpecimentManager.swift; sourceTree = "<group>"; };
 		2DBC883724A63D5D00D8DE12 /* Home+Extension+Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Extension+Slider.swift"; sourceTree = "<group>"; };
 		2DBC883924A63E5E00D8DE12 /* Home+Extension+Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Extension+Database.swift"; sourceTree = "<group>"; };
+		2DBE4B5F24A7F664003E0F08 /* MenuSliderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSliderDelegate.swift; sourceTree = "<group>"; };
+		2DBE4B6424A8A2BA003E0F08 /* Forest+Extensions+RandomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Forest+Extensions+RandomData.swift"; sourceTree = "<group>"; };
+		2DBE4B6624A8A2E5003E0F08 /* Forest+TableView+Delegate+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Forest+TableView+Delegate+DataSource.swift"; sourceTree = "<group>"; };
+		2DBE4B6A24A8A8C0003E0F08 /* TagSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSession.swift; sourceTree = "<group>"; };
+		2DBE4B6C24A8D629003E0F08 /* Home+Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Slider.swift"; sourceTree = "<group>"; };
 		2DC11D9324A75508003D8FA0 /* PieChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartCell.swift; sourceTree = "<group>"; };
 		2DC11D9524A759FF003D8FA0 /* ForestCanvasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestCanvasCell.swift; sourceTree = "<group>"; };
 		2DC11D9724A75C92003D8FA0 /* ForestCanvas.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ForestCanvas.scn; sourceTree = "<group>"; };
@@ -151,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				2D049D2C24A4F62000E8F1B8 /* NetworkingRequestable.swift */,
+				2DBE4B5F24A7F664003E0F08 /* MenuSliderDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -234,18 +245,19 @@
 		2D3DD327249B9E1F00383F23 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2DC11D9924A760CB003D8FA0 /* Menu */,
 				2D3DD33A249BD0C900383F23 /* Achievements.swift */,
 				2D3DD32E249BBA4F00383F23 /* Coin.swift */,
 				2D3DD330249BBBE600383F23 /* ColorScheme.swift */,
 				2D3DD328249B9E3200383F23 /* FocusSession.swift */,
 				2D91B36D249CCC7200215756 /* ForestAlert.swift */,
-				2D91B369249C0D1500215756 /* MenuItem.swift */,
 				2D3DD332249BC27200383F23 /* NotificationScheduler.swift */,
 				2D3DD32A249B9E6B00383F23 /* Phrases.swift */,
 				2D91B36F249CCE9F00215756 /* TreeSpecimen.swift */,
 				2DBC883324A6388F00D8DE12 /* TreeSpecimentManager.swift */,
 				2D3DD32C249BBA3800383F23 /* User.swift */,
 				2DBC883024A625AE00D8DE12 /* AppSession */,
+				2DBE4B6A24A8A8C0003E0F08 /* TagSession.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,11 +281,11 @@
 		2D3DD337249BD01000383F23 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2DBE4B6224A8A2A0003E0F08 /* ForestViewController */,
 				2DBC883524A63D3E00D8DE12 /* Home */,
 				2D38CF7E24A0E02300737F79 /* ViewController.swift */,
 				2D3DD338249BD03D00383F23 /* AchievementsTableViewController.swift */,
 				2D91B367249C0C7800215756 /* MenuTableViewController.swift */,
-				2D22205C24A65E3F0069100C /* ForestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -300,8 +312,35 @@
 			children = (
 				2DBC883724A63D5D00D8DE12 /* Home+Extension+Slider.swift */,
 				2DBC883924A63E5E00D8DE12 /* Home+Extension+Database.swift */,
+				2DBE4B6C24A8D629003E0F08 /* Home+Slider.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2DBE4B6224A8A2A0003E0F08 /* ForestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DBE4B6324A8A2A9003E0F08 /* Extensions */,
+				2D22205C24A65E3F0069100C /* ForestViewController.swift */,
+			);
+			path = ForestViewController;
+			sourceTree = "<group>";
+		};
+		2DBE4B6324A8A2A9003E0F08 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DBE4B6424A8A2BA003E0F08 /* Forest+Extensions+RandomData.swift */,
+				2DBE4B6624A8A2E5003E0F08 /* Forest+TableView+Delegate+DataSource.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2DC11D9924A760CB003D8FA0 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				2D91B369249C0D1500215756 /* MenuItem.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		89AD0C2670930E0E104315C1 /* Frameworks */ = {
@@ -507,6 +546,7 @@
 				2D2261DA249B6D5500DCDB5D /* HomeViewController.swift in Sources */,
 				2D3DD33F249BD5C600383F23 /* AchievementTableViewCell.swift in Sources */,
 				2D3DD329249B9E3200383F23 /* FocusSession.swift in Sources */,
+				2DBE4B6D24A8D629003E0F08 /* Home+Slider.swift in Sources */,
 				2D22206024A67F960069100C /* BalloonMarker.swift in Sources */,
 				2DBC883224A625BD00D8DE12 /* AppSession.swift in Sources */,
 				2D91B370249CCE9F00215756 /* TreeSpecimen.swift in Sources */,
@@ -517,12 +557,16 @@
 				2D049D2A24A40B9300E8F1B8 /* FirebaseFocusSessionStorage.swift in Sources */,
 				2DBC883824A63D5D00D8DE12 /* Home+Extension+Slider.swift in Sources */,
 				2D91B368249C0C7800215756 /* MenuTableViewController.swift in Sources */,
+				2DBE4B6024A7F664003E0F08 /* MenuSliderDelegate.swift in Sources */,
 				2D22206624A6896F0069100C /* BarChartCell.swift in Sources */,
 				2D91B36A249C0D1500215756 /* MenuItem.swift in Sources */,
 				2D2261D6249B6D5500DCDB5D /* AppDelegate.swift in Sources */,
+				2DBE4B6724A8A2E5003E0F08 /* Forest+TableView+Delegate+DataSource.swift in Sources */,
+				2DBE4B6524A8A2BA003E0F08 /* Forest+Extensions+RandomData.swift in Sources */,
 				2D91B36E249CCC7200215756 /* ForestAlert.swift in Sources */,
 				2D2261D8249B6D5500DCDB5D /* SceneDelegate.swift in Sources */,
 				2D3DD335249BC91600383F23 /* RoundedView.swift in Sources */,
+				2DBE4B6B24A8A8C0003E0F08 /* TagSession.swift in Sources */,
 				2DC11D9424A75508003D8FA0 /* PieChartCell.swift in Sources */,
 				2D22205D24A65E3F0069100C /* ForestViewController.swift in Sources */,
 				2D049D2D24A4F62000E8F1B8 /* NetworkingRequestable.swift in Sources */,

@@ -38,7 +38,6 @@ class AchievementsTableViewController: UITableViewController {
         return data.count
     }
 
-
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         guard let cell = tableView.dequeueReusableCell(
