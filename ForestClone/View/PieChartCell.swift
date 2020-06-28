@@ -9,16 +9,17 @@
 import UIKit
 import Charts
 
-extension PieChartCell: BarChartDelegate {}
+extension PieChartCell: ChartDelegate {
+}
 
 class PieChartCell: UITableViewCell {
 
     static let identifier = "PieChartCell"
 
-    var barChartView: BarChartView!
-    var dataLabels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    private var pieChartView: PieChartView!
+    private var dataLabels = [String]()
 
-    var completedSessions: [FocusSession]!
+    private var completedSessions: [FocusSession] = []
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,14 +27,14 @@ class PieChartCell: UITableViewCell {
         configureBarChart()
         configureBarChartLayout()
 
-        addSubview(barChartView)
+        addSubview(pieChartView)
 
         backgroundColor = ColorScheme.secondaryGreen
 
     }
 
-    func configureCell() {
-
+    func configureCell(completedSessions: [FocusSession]) {
+        self.completedSessions = completedSessions
     }
 
     private func configureBarChart() {
@@ -41,44 +42,6 @@ class PieChartCell: UITableViewCell {
     }
 
     private func configureBarChartLayout() {
-
-        let xAxis = barChartView.xAxis
-        xAxis.labelPosition = .bottom
-        xAxis.labelFont = .systemFont(ofSize: 11)
-        xAxis.drawAxisLineEnabled = false
-        xAxis.labelTextColor = .white
-        xAxis.labelCount = 7
-        xAxis.granularity = 1
-
-        xAxis.valueFormatter = self
-
-        let rightAxis = barChartView.rightAxis
-        rightAxis.drawLabelsEnabled = false
-
-        let leftAxis = barChartView.leftAxis
-        leftAxis.labelTextColor = .white
-
-        barChartView.doubleTapToZoomEnabled = false
-        barChartView.animate(xAxisDuration: 1, yAxisDuration: 1)
-
-        let l = barChartView.legend
-        l.horizontalAlignment = .left
-        l.verticalAlignment = .bottom
-        l.orientation = .horizontal
-        l.drawInside = false
-        l.form = .circle
-        l.formSize = 9
-        l.font = UIFont(name: "HelveticaNeue-Light", size: 11)!
-        l.xEntrySpace = 4
-
-        let marker = XYMarkerView(color: UIColor.gray,
-                                  font: .systemFont(ofSize: 12),
-                                  textColor: .white,
-                                  insets: UIEdgeInsets(top: 8, left: 0, bottom: 10, right: 0),
-                                  xAxisValueFormatter: barChartView.xAxis.valueFormatter!)
-        marker.chartView = barChartView
-        marker.minimumSize = CGSize(width: 40, height: 40)
-        barChartView.marker = marker
 
     }
 
@@ -152,60 +115,37 @@ class PieChartCell: UITableViewCell {
 
     func updateBarChartView(dateDataType: DateDataType) {
 
-        var dataEntries: [BarChartDataEntry] = []
+        let chartDataSet = PieChartDataSet(
+            entries: [ChartDataEntry(x: 0, y: 10),
+                      ChartDataEntry(x: 10, y: 40),
+                      ChartDataEntry(x: 20, y: 80)],
+            label: ""
+        )
 
-        let filteredSessionsByDateDataType = completedSessions
-            .filter {
-                compareDates(dateDataType: dateDataType, date: $0.date)
-            }
-            .map {
-                return (dateComponent: getComponent(dateDataType: dateDataType, date: $0.date),
-                        time: $0.time)
-        }
+        chartDataSet.colors = ChartColorTemplates.vordiplom()
 
-        let xAxisValues = generateDataSet(dateDataType: dateDataType, date: Date())
+        let chartData = PieChartData(dataSet: chartDataSet)
+        let pFormatter = NumberFormatter()
+        pFormatter.numberStyle = .percent
+        pFormatter.maximumFractionDigits = 1
+        pFormatter.multiplier = 1
+        pFormatter.percentSymbol = " %"
+        chartData.setValueFormatter(DefaultValueFormatter(formatter: pFormatter))
 
-        dataLabels = Array([0...xAxisValues].map({ $0.description }))
+        chartData.setValueFont(.systemFont(ofSize: 11, weight: .light))
+        chartData.setValueTextColor(.black)
 
-        var visitorCounts = [Int]()
-
-        for i in 0..<xAxisValues {
-
-            if let val = filteredSessionsByDateDataType.first(where: { $0.dateComponent == i }) {
-                visitorCounts.append(val.time)
-            } else {
-                visitorCounts.append(0)
-            }
-        }
-
-
-        for i in 0..<visitorCounts.count {
-
-            let dataEntry = BarChartDataEntry(x: Double(i),
-                                              y: Double(visitorCounts[i]))
-
-            dataEntries.append(dataEntry)
-        }
-
-        let chartDataSet = BarChartDataSet(entries: dataEntries)
-        chartDataSet.colors = [UIColor(red: 0.58, green: 0.81, blue: 0.07, alpha: 1.00)]
-        chartDataSet.highlightColor = .white
-
-        let chartData = BarChartData(dataSet: chartDataSet)
-        chartData.barWidth = 0.85
-
-        let chart = BarChartView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: 300))
+        let chart = PieChartView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: 300))
         chart.backgroundColor = .clear
         chart.data = chartData
 
-
-        barChartView = chart
+        pieChartView = chart
 
         for view in self.subviews {
             view.removeFromSuperview()
         }
 
-        addSubview(barChartView)
+        addSubview(pieChartView)
 
     }
 
