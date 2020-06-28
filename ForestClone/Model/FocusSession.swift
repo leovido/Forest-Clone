@@ -22,9 +22,11 @@ struct FocusSession: Codable {
 
     let id: FocusSessionId = UUID().uuidString
     var treeId: TreeId = ""
+    var date: Date = Date()
+
+    var tag: TagSession = TagSession(name: "work", color: "blue")
     var status: FocusSesionStatus
     var time: Seconds = 600
-    var date: Date = Date()
 
     enum CodingKeys: String, CodingKey {
         case id
