@@ -22,6 +22,13 @@ class MenuTableViewController: UITableViewController {
                                    MenuItem(name: "News", image: "news"),
                                    MenuItem(name: "Settings", image: "gear")]
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        homeDelegate?.configureView(isSliderPresented: true)
+
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
