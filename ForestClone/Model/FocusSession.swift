@@ -20,7 +20,7 @@ struct FocusSession: Codable {
         case cancelled
     }
 
-    let id: FocusSessionId = UUID().uuidString
+    var id: FocusSessionId = UUID().uuidString
     var treeId: TreeId = ""
     var date: Date = Date()
 
