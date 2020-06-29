@@ -10,4 +10,5 @@ import Foundation
 
 protocol MenuSliderDelegate: class {
     func performSegue(with name: String)
+    func configureView(isSliderPresented: Bool)
 }
