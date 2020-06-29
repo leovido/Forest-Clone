@@ -13,21 +13,17 @@ struct NotificationScheduler {
 
     let center = UNUserNotificationCenter.current()
 
-    func createSuccessNotification(with seconds: Seconds, and id: String) {
+    func createSuccessNotification(with seconds: Seconds,
+                                   and id: String,
+                                   semaphore: DispatchSemaphore = DispatchSemaphore(value: 0)) -> Result<Bool, Error> {
+
+        var result: Result<Bool, Error>!
 
         // 1. Request authorization
-        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-
-            if error != nil {
-                print(error!)
+        center.requestAuthorization(options: [.alert, .sound]) { _, error in
+            if let error = error {
+                print(error.localizedDescription)
             }
-
-            if granted {
-
-            } else {
-
-            }
-
         }
 
         // 2. Create a notification content
@@ -52,10 +48,18 @@ struct NotificationScheduler {
         let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
 
         center.add(request) { error in
-            if error != nil {
-                print(error!)
+            if let error = error {
+                result = Result.failure(error)
+                semaphore.signal()
+            } else {
+                result = Result.success(true)
+                semaphore.signal()
             }
         }
+
+        _ = semaphore.wait(wallTimeout: .distantFuture)
+
+        return result
 
     }
 
