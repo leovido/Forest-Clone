@@ -45,16 +45,19 @@
 		2D91B372249CD56600215756 /* treeSpecies.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D91B371249CD56600215756 /* treeSpecies.json */; };
 		2DBC883224A625BD00D8DE12 /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC883124A625BD00D8DE12 /* AppSession.swift */; };
 		2DBC883424A6388F00D8DE12 /* TreeSpecimentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC883324A6388F00D8DE12 /* TreeSpecimentManager.swift */; };
-		2DBC883824A63D5D00D8DE12 /* Home+Extension+Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC883724A63D5D00D8DE12 /* Home+Extension+Slider.swift */; };
+		2DBC883824A63D5D00D8DE12 /* Home+Extension+MSCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC883724A63D5D00D8DE12 /* Home+Extension+MSCircularSlider.swift */; };
 		2DBC883A24A63E5E00D8DE12 /* Home+Extension+Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC883924A63E5E00D8DE12 /* Home+Extension+Database.swift */; };
 		2DBE4B6024A7F664003E0F08 /* MenuSliderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE4B5F24A7F664003E0F08 /* MenuSliderDelegate.swift */; };
 		2DBE4B6524A8A2BA003E0F08 /* Forest+Extensions+RandomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE4B6424A8A2BA003E0F08 /* Forest+Extensions+RandomData.swift */; };
 		2DBE4B6724A8A2E5003E0F08 /* Forest+TableView+Delegate+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE4B6624A8A2E5003E0F08 /* Forest+TableView+Delegate+DataSource.swift */; };
 		2DBE4B6B24A8A8C0003E0F08 /* TagSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE4B6A24A8A8C0003E0F08 /* TagSession.swift */; };
-		2DBE4B6D24A8D629003E0F08 /* Home+Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE4B6C24A8D629003E0F08 /* Home+Slider.swift */; };
+		2DBE4B6D24A8D629003E0F08 /* Home+MenuSliderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE4B6C24A8D629003E0F08 /* Home+MenuSliderDelegate.swift */; };
+		2DBE4B6F24A8D6D2003E0F08 /* Home+Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE4B6E24A8D6D2003E0F08 /* Home+Timer.swift */; };
+		2DBE4B7124A8D72D003E0F08 /* ForestSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE4B7024A8D72D003E0F08 /* ForestSegue.swift */; };
 		2DC11D9424A75508003D8FA0 /* PieChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC11D9324A75508003D8FA0 /* PieChartCell.swift */; };
 		2DC11D9624A759FF003D8FA0 /* ForestCanvasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC11D9524A759FF003D8FA0 /* ForestCanvasCell.swift */; };
 		2DC11D9824A75C92003D8FA0 /* ForestCanvas.scn in Resources */ = {isa = PBXBuildFile; fileRef = 2DC11D9724A75C92003D8FA0 /* ForestCanvas.scn */; };
+		2DC4DFC424AA132300F78DB1 /* ForestAlertCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC4DFC324AA132300F78DB1 /* ForestAlertCustom.swift */; };
 		50667A3D345E62B16C36C7B2 /* Pods_ForestClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79CEFB2D34116831DB2A2D5 /* Pods_ForestClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,16 +113,19 @@
 		2D91B371249CD56600215756 /* treeSpecies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = treeSpecies.json; sourceTree = "<group>"; };
 		2DBC883124A625BD00D8DE12 /* AppSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
 		2DBC883324A6388F00D8DE12 /* TreeSpecimentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeSpecimentManager.swift; sourceTree = "<group>"; };
-		2DBC883724A63D5D00D8DE12 /* Home+Extension+Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Extension+Slider.swift"; sourceTree = "<group>"; };
+		2DBC883724A63D5D00D8DE12 /* Home+Extension+MSCircularSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Extension+MSCircularSlider.swift"; sourceTree = "<group>"; };
 		2DBC883924A63E5E00D8DE12 /* Home+Extension+Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Extension+Database.swift"; sourceTree = "<group>"; };
 		2DBE4B5F24A7F664003E0F08 /* MenuSliderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSliderDelegate.swift; sourceTree = "<group>"; };
 		2DBE4B6424A8A2BA003E0F08 /* Forest+Extensions+RandomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Forest+Extensions+RandomData.swift"; sourceTree = "<group>"; };
 		2DBE4B6624A8A2E5003E0F08 /* Forest+TableView+Delegate+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Forest+TableView+Delegate+DataSource.swift"; sourceTree = "<group>"; };
 		2DBE4B6A24A8A8C0003E0F08 /* TagSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSession.swift; sourceTree = "<group>"; };
-		2DBE4B6C24A8D629003E0F08 /* Home+Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Slider.swift"; sourceTree = "<group>"; };
+		2DBE4B6C24A8D629003E0F08 /* Home+MenuSliderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+MenuSliderDelegate.swift"; sourceTree = "<group>"; };
+		2DBE4B6E24A8D6D2003E0F08 /* Home+Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Timer.swift"; sourceTree = "<group>"; };
+		2DBE4B7024A8D72D003E0F08 /* ForestSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestSegue.swift; sourceTree = "<group>"; };
 		2DC11D9324A75508003D8FA0 /* PieChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartCell.swift; sourceTree = "<group>"; };
 		2DC11D9524A759FF003D8FA0 /* ForestCanvasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestCanvasCell.swift; sourceTree = "<group>"; };
 		2DC11D9724A75C92003D8FA0 /* ForestCanvas.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ForestCanvas.scn; sourceTree = "<group>"; };
+		2DC4DFC324AA132300F78DB1 /* ForestAlertCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestAlertCustom.swift; sourceTree = "<group>"; };
 		314E19A91BADC8A6D9B9FC92 /* Pods-ForestClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForestClone.release.xcconfig"; path = "Target Support Files/Pods-ForestClone/Pods-ForestClone.release.xcconfig"; sourceTree = "<group>"; };
 		A3DA34ED50EAC465CAB8CB1F /* Pods-ForestClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForestClone.debug.xcconfig"; path = "Target Support Files/Pods-ForestClone/Pods-ForestClone.debug.xcconfig"; sourceTree = "<group>"; };
 		B03DAC2CBEC4C89EE6B79677 /* Pods_ForestCloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForestCloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,6 +264,7 @@
 				2D3DD32C249BBA3800383F23 /* User.swift */,
 				2DBC883024A625AE00D8DE12 /* AppSession */,
 				2DBE4B6A24A8A8C0003E0F08 /* TagSession.swift */,
+				2DBE4B7024A8D72D003E0F08 /* ForestSegue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,9 +317,11 @@
 		2DBC883624A63D4C00D8DE12 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2DBC883724A63D5D00D8DE12 /* Home+Extension+Slider.swift */,
+				2DC4DFC224AA131300F78DB1 /* Alerts */,
+				2DBC883724A63D5D00D8DE12 /* Home+Extension+MSCircularSlider.swift */,
+				2DBE4B6E24A8D6D2003E0F08 /* Home+Timer.swift */,
 				2DBC883924A63E5E00D8DE12 /* Home+Extension+Database.swift */,
-				2DBE4B6C24A8D629003E0F08 /* Home+Slider.swift */,
+				2DBE4B6C24A8D629003E0F08 /* Home+MenuSliderDelegate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -341,6 +350,14 @@
 				2D91B369249C0D1500215756 /* MenuItem.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		2DC4DFC224AA131300F78DB1 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				2DC4DFC324AA132300F78DB1 /* ForestAlertCustom.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		89AD0C2670930E0E104315C1 /* Frameworks */ = {
@@ -536,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D22205B24A65D0C0069100C /* PieChartView.swift in Sources */,
+				2DC4DFC424AA132300F78DB1 /* ForestAlertCustom.swift in Sources */,
 				2D22206224A681E40069100C /* XYMarkerView.swift in Sources */,
 				2DBC883424A6388F00D8DE12 /* TreeSpecimentManager.swift in Sources */,
 				2D3DD331249BBBE600383F23 /* ColorScheme.swift in Sources */,
@@ -546,18 +564,20 @@
 				2D2261DA249B6D5500DCDB5D /* HomeViewController.swift in Sources */,
 				2D3DD33F249BD5C600383F23 /* AchievementTableViewCell.swift in Sources */,
 				2D3DD329249B9E3200383F23 /* FocusSession.swift in Sources */,
-				2DBE4B6D24A8D629003E0F08 /* Home+Slider.swift in Sources */,
+				2DBE4B6D24A8D629003E0F08 /* Home+MenuSliderDelegate.swift in Sources */,
 				2D22206024A67F960069100C /* BalloonMarker.swift in Sources */,
 				2DBC883224A625BD00D8DE12 /* AppSession.swift in Sources */,
 				2D91B370249CCE9F00215756 /* TreeSpecimen.swift in Sources */,
 				2D3DD32D249BBA3800383F23 /* User.swift in Sources */,
+				2DBE4B6F24A8D6D2003E0F08 /* Home+Timer.swift in Sources */,
 				2D3DD333249BC27200383F23 /* NotificationScheduler.swift in Sources */,
 				2D049D2F24A4F7FC00E8F1B8 /* GenericFirebaseStorage.swift in Sources */,
 				2D3DD32B249B9E6B00383F23 /* Phrases.swift in Sources */,
 				2D049D2A24A40B9300E8F1B8 /* FirebaseFocusSessionStorage.swift in Sources */,
-				2DBC883824A63D5D00D8DE12 /* Home+Extension+Slider.swift in Sources */,
+				2DBC883824A63D5D00D8DE12 /* Home+Extension+MSCircularSlider.swift in Sources */,
 				2D91B368249C0C7800215756 /* MenuTableViewController.swift in Sources */,
 				2DBE4B6024A7F664003E0F08 /* MenuSliderDelegate.swift in Sources */,
+				2DBE4B7124A8D72D003E0F08 /* ForestSegue.swift in Sources */,
 				2D22206624A6896F0069100C /* BarChartCell.swift in Sources */,
 				2D91B36A249C0D1500215756 /* MenuItem.swift in Sources */,
 				2D2261D6249B6D5500DCDB5D /* AppDelegate.swift in Sources */,
