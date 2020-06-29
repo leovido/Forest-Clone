@@ -43,9 +43,20 @@ extension HomeViewController {
                     return
                 }
 
-                self.session = latestActiveSession
+                // Check if the latest session has finished by comparing the Date
+                let expectedDateFinished = latestActiveSession.date.addingTimeInterval(TimeInterval(latestActiveSession.time))
 
-                completion(true)
+                if expectedDateFinished > Date() {
+                    self.session = latestActiveSession
+                    self.session.id = latestActiveSession.id
+                    completion(true)
+                } else {
+                    self.firebaseFocusSessionStorage.update(id: self.session.id, data: ["status": "completed"]) { updatedSession in
+
+                        // update user sessions here...
+
+                    }
+                }
 
             } catch let error {
                 print(error)
