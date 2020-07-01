@@ -174,15 +174,14 @@ class HomeViewController: UIViewController {
 
         guard let menu = storyboard!.instantiateViewController(
             withIdentifier: "SideMenuNavigationController"
-            ) as? SideMenuNavigationController else {
-                fatalError("SideMenuNavigationController not implemented")
+        ) as? SideMenuNavigationController else {
+            fatalError("SideMenuNavigationController not implemented")
         }
 
         configureView(isSliderPresented: false)
 
         menu.presentationStyle = .menuDissolveIn
         menu.menuWidth = 200
-        menu.blurEffectStyle = .dark
 
         guard let menuViewController = menu.viewControllers.first as? MenuTableViewController else {
             return
