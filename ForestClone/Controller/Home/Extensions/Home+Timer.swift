@@ -14,7 +14,7 @@ extension HomeViewController {
 
          // 1. Calculate the time elapsed from the existing session if it's already started and not completed.
 
-        let timeElapsed = Date().timeIntervalSince(session.date.addingTimeInterval(TimeInterval(session.time)))
+        let timeElapsed = session.date.addingTimeInterval(TimeInterval(session.time)).timeIntervalSince(Date())
 
         if timeElapsed < 0 {
             viewModel.service.update(id: session.focusSessionId, data: ["status": "completed"]) { result in
