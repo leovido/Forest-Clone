@@ -18,9 +18,10 @@ protocol NetworkingRequestable {
 
     // The Model allows you to store any Swift object in a database.
     associatedtype Model
+    associatedtype Service
 
     var referenceName: String { get }
-    var modelReference: DatabaseReference { get }
+    var modelReference: Service { get }
 
     func create(entry: Model, completion: @escaping (Bool) -> Void)
     func read(id: String, completion: @escaping (Model) -> Void)
