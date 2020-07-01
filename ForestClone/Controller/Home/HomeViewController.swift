@@ -33,8 +33,11 @@ class HomeViewController: UIViewController {
             print(updatedSession)
         }
 
+        // Reset the session
+
+        session = resetSession()
+
         timerLabel.text = timeFormatted(time: session.time)
-        session.status = .cancelled
 
     }
 
@@ -52,7 +55,7 @@ class HomeViewController: UIViewController {
     var timerValue: Int! = 600
 
     var currentUser = AppSession.user
-    var session = FocusSession(status: .idle) {
+    var session = FocusSession(userId: AppSession.user.userId, status: .idle) {
         didSet {
             if session.status == .started {
                 plantButton.isHidden = true
@@ -141,6 +144,10 @@ class HomeViewController: UIViewController {
 
         }
 
+    }
+
+    func resetSession() -> FocusSession {
+        FocusSession(userId: currentUser.userId, status: .idle)
     }
 
     @objc func updateSession(notification: Notification) {
