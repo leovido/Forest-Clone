@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import MSCircularSlider
 import SideMenu
 import CodableFirebase
@@ -26,8 +27,9 @@ class HomeViewController: UIViewController {
 
         customAlertPresenter.presenter.presentFailureAlert()
         timer?.invalidate()
-        notificationScheduler.cancelExistingNotification(id: session.id)
-        firebaseFocusSessionStorage.update(id: session.id, data: ["status": "cancelled"]) { updatedSession in
+        notificationScheduler.cancelExistingNotification(id: session.focusSessionId)
+
+        viewModel.service.update(id: session.focusSessionId, data: ["status": "cancelled"]) { updatedSession in
             print(updatedSession)
         }
 
@@ -66,27 +68,31 @@ class HomeViewController: UIViewController {
     let treeSpecimenManager = TreeSpecimenManager()
 
     // - MARK: Firebase Database Storage
-    let firebaseFocusSessionStorage: FirebaseStorage = {
-        FirebaseStorage<FocusSession>(referenceName: "focusSession")
-    }()
-    let firebaseUserStorage: FirebaseStorage = {
-        FirebaseStorage<User>(referenceName: "appUser")
-    }()
+    let viewModel: FocusSessionViewModel = FocusSessionViewModel()
+    let firebaseUserStorage = UserStorage()
+
+    let firebaseAuthManager = FirebaseAuthManager(storage: UserStorage())
 
     @IBAction func plantButton(_ sender: Any) {
 
-        phraseLabel.text = generateRandomPhrase()
-        timer = processTimer()
+        phraseLabel.text = generateRandomPhrase(phrases: phrases, type: .default)
+
+        session.date = Date().addingTimeInterval(TimeInterval(session.time))
+        timerValue = session.time
+
+        timer = processTimer {
+            self.updateTimer()
+        }
 
         _ = notificationScheduler
-            .createSuccessNotification(with: session.time, and: session.id)
+            .createSuccessNotification(with: session.time, and: session.focusSessionId)
             .map({ success in
 
                 if success {
                     self.session.date = Date()
                     self.session.status = .started
 
-                    self.createFirebaseEntry()
+                    try! self.createFirebaseEntry()
                 }
 
             })
@@ -121,6 +127,49 @@ class HomeViewController: UIViewController {
 
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(menuSidebarConfiguration))
 
+        firebaseAuthManager.setUserListener()
+        firebaseAuthManager.signin(email: "test@test.com", password: "pass123") {
+
+        }
+
+    }
+
+    @objc func updateSession(notification: Notification) {
+
+        guard let sessionInfo = notification.userInfo else {
+            return
+        }
+
+        guard let focusSessionId = sessionInfo["focusSessionId"] as? String else {
+            return
+        }
+
+        viewModel.service.update(id: focusSessionId, data: ["status": FocusSession.FocusSesionStatus.completed.rawValue]) { focusSession in
+            self.updateUserStorage()
+        }
+    }
+
+    @objc func menuSidebarConfiguration() {
+
+        guard let menu = storyboard!.instantiateViewController(
+            withIdentifier: "SideMenuNavigationController"
+            ) as? SideMenuNavigationController else {
+                fatalError("SideMenuNavigationController not implemented")
+        }
+
+        configureView(isSliderPresented: false)
+
+        menu.presentationStyle = .menuDissolveIn
+        menu.menuWidth = 200
+        menu.blurEffectStyle = .dark
+
+        guard let menuViewController = menu.viewControllers.first as? MenuTableViewController else {
+            return
+        }
+
+        present(menu, animated: true) {
+            menuViewController.homeDelegate = self
+        }
     }
 
     @objc func treeManager() {
@@ -141,17 +190,8 @@ class HomeViewController: UIViewController {
                                                object: nil)
     }
 
-    func generateRandomPhrase() -> String {
-
-        guard let allPhrases = phrases[.default] else {
-            return ""
-        }
-
-        guard let randomPhrase = allPhrases.randomElement() else {
-            return ""
-        }
-
-        return randomPhrase
+    func generateRandomPhrase(phrases: [PhraseType: [String]], type: PhraseType) -> String? {
+        phrases[type]?.randomElement()
     }
 
 }
