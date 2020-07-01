@@ -8,11 +8,14 @@
 
 import Foundation
 
-struct User: Codable {
-    let id: String
-    let name: String
-    let coins: [Coin]
-    let achievements: [Achievement]
-    let currentSession: FocusSession?
-    var completedSessions: [FocusSession]
+typealias UserId = String
+
+struct User: Codable, FirebaseUserRepresentable {
+    let userId: UserId
+    let displayName: String
+    let email: String
+    let coins: Coin
+    let achievements: [AchievementId]
+    let currentSession: FocusSessionId?
+    var completedSessions: [FocusSessionId]
 }
