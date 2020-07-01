@@ -21,13 +21,13 @@ final class UserStorage: NetworkingService, FirebaseInterface {
         self.modelReference = DatabaseReference().child(referenceName)
     }
 
-    func create(data: [String : Any], completion: @escaping (Result<Bool, Error>) -> Void) {
+    func create(data: [String: Any], completion: @escaping (Result<Bool, Error>) -> Void) {
 
         guard let id = data["userId"] as? String else {
             fatalError("JSON needs a userId")
         }
 
-        modelReference.child(id).updateChildValues(data) { error, ref in
+        modelReference.child(id).updateChildValues(data) { error, _ in
 
             if let error = error {
                 completion(Result.failure(error))
@@ -53,7 +53,7 @@ final class UserStorage: NetworkingService, FirebaseInterface {
 
     }
 
-    func readAll(completion: @escaping (Result<[[String : Any]], Error>) -> Void) {
+    func readAll(completion: @escaping (Result<[[String: Any]], Error>) -> Void) {
 
         modelReference.observeSingleEvent(of: .value, with: { snapshot in
 
@@ -69,9 +69,11 @@ final class UserStorage: NetworkingService, FirebaseInterface {
 
     }
 
-    func update(id: String, data: [String : Any], completion: @escaping (Result<[String: Any], Error>) -> Void) {
+    func update(id: String,
+                data: [String: Any],
+                completion: @escaping (Result<[String: Any], Error>) -> Void) {
 
-        modelReference.child(id).updateChildValues(data) { error, ref in
+        modelReference.child(id).updateChildValues(data) { error, _ in
             if let error = error {
                 completion(Result.failure(error))
             } else {
@@ -88,6 +90,5 @@ final class UserStorage: NetworkingService, FirebaseInterface {
     func delete(id: String, completion: @escaping (Result<Bool, Error>) -> Void) {
         modelReference.child(id).removeValue()
     }
-
 
 }

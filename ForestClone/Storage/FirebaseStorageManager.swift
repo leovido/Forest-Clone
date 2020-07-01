@@ -8,6 +8,8 @@
 
 import Foundation
 
+// swiftlint:disable type_name
+
 protocol Storage {
 
     associatedtype T
@@ -27,3 +29,5 @@ final class FirebaseStorageManager<T: NetworkingRequestable, U: NetworkingReques
         self.userStorage = userStorage
     }
 }
+
+// swiftlint:enable type_name

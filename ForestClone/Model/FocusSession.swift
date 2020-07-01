@@ -21,16 +21,17 @@ struct FocusSession: Codable {
     }
 
     var focusSessionId: FocusSessionId = UUID().uuidString
-    var userId: String = UUID().uuidString
+    var userId: String
     var treeId: TreeId = ""
     var date: Date = Date()
 
-    var tag: TagSession = TagSession(name: "work", color: "blue")
+    var tag: TagSession = TagSession(name: "Work", color: "blue")
     var status: FocusSesionStatus
     var time: Seconds = 600
 
     enum CodingKeys: String, CodingKey {
         case focusSessionId
+        case userId
         case status
         case time
         case date

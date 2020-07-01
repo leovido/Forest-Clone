@@ -27,7 +27,7 @@ class ForestViewController: UIViewController {
     weak var barChartDelegate: ChartDelegate?
 
     // 1. This is too long and needs refactoring. We can use a function to automatically generate dummy data.
-    /// See `randomFocusSessionData`
+    // See `randomFocusSessionData`
 
     /*
     let completedSessions: [FocusSession] = [
@@ -47,22 +47,22 @@ class ForestViewController: UIViewController {
     @IBAction func dateSegmentedControl(_ sender: Any) {
 
         switch dateSegmentedControl.selectedSegmentIndex {
-            case 0:
-                barChartDelegate?.updateBarChartView(dateDataType: .day)
-            case 1:
-                barChartDelegate?.updateBarChartView(dateDataType: .week)
-            case 2:
-                barChartDelegate?.updateBarChartView(dateDataType: .month)
-            case 3:
-                barChartDelegate?.updateBarChartView(dateDataType: .year)
-            default:
-                break
+        case 0:
+            barChartDelegate?.updateBarChartView(dateDataType: .day)
+        case 1:
+            barChartDelegate?.updateBarChartView(dateDataType: .week)
+        case 2:
+            barChartDelegate?.updateBarChartView(dateDataType: .month)
+        case 3:
+            barChartDelegate?.updateBarChartView(dateDataType: .year)
+        default:
+            break
         }
 
     }
 
     @IBOutlet weak var forestTableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -72,7 +72,7 @@ class ForestViewController: UIViewController {
         forestTableView.dataSource = self
 
         forestTableView.backgroundColor = ColorScheme.secondaryGreen
-        
+
         view.backgroundColor = ColorScheme.secondaryGreen
 
     }

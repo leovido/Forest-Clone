@@ -7,16 +7,10 @@ target 'ForestClone' do
 
   # Pods for ForestClone
   pod 'MSCircularSlider'
-  pod 'SideMenu'
 
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
-
-  pod 'CodableFirebase'
-
-  pod 'SCLAlertView'
-  pod 'Charts'
 
   pod  'SwiftRandom'
   

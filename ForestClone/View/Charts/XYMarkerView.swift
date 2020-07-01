@@ -6,14 +6,18 @@
 //  Copyright © 2020 Accent IT Services. All rights reserved.
 //
 
+import UIKit
 import Charts
 
 class XYMarkerView: BalloonMarker {
     var xAxisValueFormatter: IAxisValueFormatter
     fileprivate var yFormatter = NumberFormatter()
 
-    init(color: UIColor, font: UIFont, textColor: UIColor, insets: UIEdgeInsets,
-                xAxisValueFormatter: IAxisValueFormatter) {
+    init(color: UIColor,
+         font: UIFont,
+         textColor: UIColor,
+         insets: UIEdgeInsets,
+         xAxisValueFormatter: IAxisValueFormatter) {
         self.xAxisValueFormatter = xAxisValueFormatter
         yFormatter.minimumFractionDigits = 1
         yFormatter.maximumFractionDigits = 1
@@ -37,7 +41,6 @@ class XYMarkerView: BalloonMarker {
         } else {
             return String(format: "%2iH %2iM", hours, minutes)
         }
-
 
     }
 

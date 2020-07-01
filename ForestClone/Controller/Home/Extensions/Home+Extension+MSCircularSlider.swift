@@ -45,7 +45,6 @@ extension HomeViewController: MSCircularSliderDelegate {
 
                 currentTreeImage.image = treeSpecimenManager.updateTreeImage(with: timerValue)
 
-
             }
         }
     }

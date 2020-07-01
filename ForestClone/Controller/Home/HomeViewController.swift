@@ -33,8 +33,11 @@ class HomeViewController: UIViewController {
             print(updatedSession)
         }
 
+        // Reset the session
+
+        session = resetSession()
+
         timerLabel.text = timeFormatted(time: session.time)
-        session.status = .cancelled
 
     }
 
@@ -52,7 +55,7 @@ class HomeViewController: UIViewController {
     var timerValue: Int! = 600
 
     var currentUser = AppSession.user
-    var session = FocusSession(status: .idle) {
+    var session = FocusSession(userId: AppSession.user.userId, status: .idle) {
         didSet {
             if session.status == .started {
                 plantButton.isHidden = true
@@ -92,7 +95,11 @@ class HomeViewController: UIViewController {
                     self.session.date = Date()
                     self.session.status = .started
 
-                    try! self.createFirebaseEntry()
+                    do {
+                        try self.createFirebaseEntry()
+                    } catch let error {
+                        print(error.localizedDescription)
+                    }
                 }
 
             })
@@ -108,6 +115,8 @@ class HomeViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        timerLabel.text = timeFormatted(time: 600)
 
         fetchLatestSession { success in
 
@@ -125,13 +134,22 @@ class HomeViewController: UIViewController {
         setupNotificationCenter()
         configureTapForTreeSelection()
 
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(menuSidebarConfiguration))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "Menu",
+            style: .plain,
+            target: self,
+            action: #selector(menuSidebarConfiguration)
+        )
 
         firebaseAuthManager.setUserListener()
         firebaseAuthManager.signin(email: "test@test.com", password: "pass123") {
 
         }
 
+    }
+
+    func resetSession() -> FocusSession {
+        FocusSession(userId: currentUser.userId, status: .idle)
     }
 
     @objc func updateSession(notification: Notification) {
@@ -144,7 +162,10 @@ class HomeViewController: UIViewController {
             return
         }
 
-        viewModel.service.update(id: focusSessionId, data: ["status": FocusSession.FocusSesionStatus.completed.rawValue]) { focusSession in
+        let completed = FocusSession.FocusSesionStatus.completed.rawValue
+
+        viewModel.service.update(id: focusSessionId,
+                                 data: ["status": completed]) { _ in
             self.updateUserStorage()
         }
     }

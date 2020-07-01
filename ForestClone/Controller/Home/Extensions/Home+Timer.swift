@@ -14,15 +14,15 @@ extension HomeViewController {
 
          // 1. Calculate the time elapsed from the existing session if it's already started and not completed.
 
-        let timeElapsed = Date().timeIntervalSince(session.date.addingTimeInterval(TimeInterval(session.time)))
+        let timeElapsed = session.date.addingTimeInterval(TimeInterval(session.time)).timeIntervalSince(Date())
 
         if timeElapsed < 0 {
             viewModel.service.update(id: session.focusSessionId, data: ["status": "completed"]) { result in
                 switch result {
-                    case .success(let json):
-                        print(json)
-                    case .failure(let error):
-                        print(error.localizedDescription)
+                case .success(let json):
+                    print(json)
+                case .failure(let error):
+                    print(error.localizedDescription)
                 }
             }
         } else {
@@ -51,7 +51,7 @@ extension HomeViewController {
 
     func processTimer(with completion: @escaping () -> Void) -> Timer {
 
-        return Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+        return Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             completion()
         }
 

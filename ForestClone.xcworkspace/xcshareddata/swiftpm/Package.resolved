@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Charts",
+        "repositoryURL": "https://github.com/danielgindi/Charts",
+        "state": {
+          "branch": null,
+          "revision": "7ac4a05e83d279bac305a472af9128c2a0eca3d7",
+          "version": "3.5.0"
+        }
+      },
+      {
+        "package": "CodableFirebase",
+        "repositoryURL": "https://github.com/alickbass/CodableFirebase",
+        "state": {
+          "branch": null,
+          "revision": "a4cda89948db93ec21249a35ecdacab8c489a116",
+          "version": "0.2.2"
+        }
+      },
+      {
+        "package": "SCLAlertView",
+        "repositoryURL": "https://github.com/vikmeup/SCLAlertView-Swift",
+        "state": {
+          "branch": "master",
+          "revision": "f08ec93c299a221210e59462c84c79410050e5b7",
+          "version": null
+        }
+      },
+      {
+        "package": "SideMenu",
+        "repositoryURL": "https://github.com/jonkykong/SideMenu",
+        "state": {
+          "branch": null,
+          "revision": "138103093176154f84ae9a2a63e58b9ae78bc6d7",
+          "version": "6.4.8"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

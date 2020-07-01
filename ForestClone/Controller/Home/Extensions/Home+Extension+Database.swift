@@ -15,11 +15,11 @@ extension HomeViewController {
         viewModel.service.create(data: try session.encodeToJSON()) { result in
 
             switch result {
-                case .success:
+            case .success:
                 print("Successfully create a new entry in Firebase")
 
-                case .failure(let error):
-                    print("Something happened and it wasn't stored in Firebase: \(error.localizedDescription)")
+            case .failure(let error):
+                print("Something happened and it wasn't stored in Firebase: \(error.localizedDescription)")
             }
         }
     }
@@ -29,46 +29,47 @@ extension HomeViewController {
         viewModel.service.readAll { result in
 
             switch result {
-                case .success(let values):
+            case .success(let values):
 
-                do {
+            do {
 
-                    let models = try FirebaseDecoder()
-                        .decode([FocusSession].self, from: values)
-                        .filter({ $0.status == .started })
-                        .sorted(by: { $0.date < $1.date })
+                let models = try FirebaseDecoder()
+                    .decode([FocusSession].self, from: values)
+                    .filter({ $0.status == .started })
+                    .sorted(by: { $0.date < $1.date })
 
-                    guard let latestActiveSession = models.last else {
-                        return
-                    }
-
-                    // Check if the latest session has finished by comparing the Date
-                    let expectedDateFinished = latestActiveSession.date.addingTimeInterval(TimeInterval(latestActiveSession.time))
-
-                    if expectedDateFinished > Date() {
-                        self.session = latestActiveSession
-                        self.session.focusSessionId = latestActiveSession.focusSessionId
-                        completion(true)
-                    } else {
-                        self.viewModel.service
-                            .update(id: self.session.focusSessionId,
-                                    data: ["status": "completed"]) { updatedSession in
-
-                            // update user sessions here...
-
-                            completion(true)
-
-                        }
-                    }
-
-                } catch let error {
-                    print(error)
-
-                    completion(false)
-
+                guard let latestActiveSession = models.last else {
+                    return
                 }
 
-                case .failure:
+                // Check if the latest session has finished by comparing the Date
+                let expectedDateFinished = latestActiveSession.date
+                    .addingTimeInterval(TimeInterval(latestActiveSession.time))
+
+                if expectedDateFinished > Date() {
+                    self.session = latestActiveSession
+                    self.session.focusSessionId = latestActiveSession.focusSessionId
+                    completion(true)
+                } else {
+                    self.viewModel.service
+                        .update(id: self.session.focusSessionId,
+                                data: ["status": "completed"]) { _ in
+
+                        // update user sessions here...
+
+                        completion(true)
+
+                    }
+                }
+
+            } catch let error {
+                print(error)
+
+                completion(false)
+
+            }
+
+            case .failure:
                 completion(false)
             }
         }

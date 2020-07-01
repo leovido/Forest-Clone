@@ -29,7 +29,11 @@ class FirebaseFocusSessionStorage: NetworkingRequestable {
 
         do {
             let data = try JSONEncoder().encode(entry)
-            let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: Any]
+            guard let json = try JSONSerialization
+                .jsonObject(with: data,
+                            options: .allowFragments) as? [String: Any] else {
+                return
+            }
 
             modelReference.childByAutoId().updateChildValues(json)
 
@@ -48,7 +52,7 @@ class FirebaseFocusSessionStorage: NetworkingRequestable {
     }
 
     // 3. Update
-    func update(id: String, data: [String : Any], completion: @escaping (FocusSession) -> Void) {
+    func update(id: String, data: [String: Any], completion: @escaping (FocusSession) -> Void) {
 
     }
 

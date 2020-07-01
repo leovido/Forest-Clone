@@ -18,7 +18,10 @@ extension ForestViewController: UITableViewDataSource {
 
         if indexPath.row == 0 {
 
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: ForestCanvasCell.identifier, for: indexPath) as? ForestCanvasCell else {
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: ForestCanvasCell.identifier,
+                for: indexPath
+            ) as? ForestCanvasCell else {
                 return UITableViewCell()
             }
 
@@ -28,7 +31,10 @@ extension ForestViewController: UITableViewDataSource {
 
         if indexPath.row == 1 {
 
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: BarChartCell.identifier, for: indexPath) as? BarChartCell else {
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: BarChartCell.identifier,
+                for: indexPath
+            ) as? BarChartCell else {
                 return UITableViewCell()
             }
 
@@ -39,7 +45,10 @@ extension ForestViewController: UITableViewDataSource {
 
         } else if indexPath.row == 2 {
 
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: PieChartCell.identifier, for: indexPath) as? PieChartCell else {
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: PieChartCell.identifier,
+                for: indexPath
+            ) as? PieChartCell else {
                 return UITableViewCell()
             }
 
@@ -54,7 +63,10 @@ extension ForestViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        guard let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "TreesOverviewViewController") as? TreesOverviewViewController else {
+        guard let vc = UIStoryboard.init(name: "Main", bundle: nil)
+            .instantiateViewController(
+                identifier: "TreesOverviewViewController"
+            ) as? TreesOverviewViewController else {
             return
         }
 

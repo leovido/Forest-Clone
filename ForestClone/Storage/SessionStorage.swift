@@ -21,13 +21,13 @@ final class SessionStorage: NetworkingService, FirebaseInterface {
         self.modelReference = Database.database().reference().child(referenceName)
     }
 
-    func create(data: [String : Any], completion: @escaping (Result<Bool, Error>) -> Void) {
+    func create(data: [String: Any], completion: @escaping (Result<Bool, Error>) -> Void) {
 
         guard let id = data["focusSessionId"] as? String else {
             fatalError("JSON needs a focusSessionId")
         }
 
-        modelReference.child(id).updateChildValues(data) { error, ref in
+        modelReference.child(id).updateChildValues(data) { error, _ in
 
             if let error = error {
                 completion(Result.failure(error))
@@ -47,8 +47,8 @@ final class SessionStorage: NetworkingService, FirebaseInterface {
 
     }
 
-    func readAll(completion: @escaping (Result<[[String : Any]], Error>) -> Void) {
-        
+    func readAll(completion: @escaping (Result<[[String: Any]], Error>) -> Void) {
+
         modelReference.observe(.value, with: { snap in
             guard let value = snap.value as? [String: Any] else {
                 return
@@ -63,10 +63,9 @@ final class SessionStorage: NetworkingService, FirebaseInterface {
         }
     }
 
+    func update(id: String, data: [String: Any], completion: @escaping (Result<[String: Any], Error>) -> Void) {
 
-    func update(id: String, data: [String : Any], completion: @escaping (Result<[String: Any], Error>) -> Void) {
-
-        modelReference.child(id).updateChildValues(data) { error, ref in
+        modelReference.child(id).updateChildValues(data) { error, _ in
             if let error = error {
                 completion(Result.failure(error))
             } else {
