@@ -263,15 +263,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forest Clone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gd-WQ-nwe">
-                                <rect key="frame" x="0.0" y="137" width="414" height="269"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forest Clone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gd-WQ-nwe">
+                                <rect key="frame" x="0.0" y="107.99999999999999" width="414" height="218.66666666666663"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="80"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.092961184680461884" green="0.53988504409790039" blue="0.52338093519210815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Gd-WQ-nwe" firstAttribute="top" secondItem="3WQ-KP-Wo8" secondAttribute="top" constant="20" id="RZz-2t-YpO"/>
+                            <constraint firstItem="2Gd-WQ-nwe" firstAttribute="trailing" secondItem="3WQ-KP-Wo8" secondAttribute="trailing" id="TIZ-XF-lZz"/>
+                            <constraint firstItem="2Gd-WQ-nwe" firstAttribute="leading" secondItem="3WQ-KP-Wo8" secondAttribute="leading" id="g0F-1B-Kp6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3WQ-KP-Wo8"/>
                     </view>
                     <navigationItem key="navigationItem" id="6On-Il-NoA"/>
