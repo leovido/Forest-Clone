@@ -8,7 +8,10 @@
 
 import Foundation
 
+typealias AchievementId = String
+
 struct Achievement: Codable {
+    let achievementId: AchievementId
     let name: String
     let description: String
     let image: String
