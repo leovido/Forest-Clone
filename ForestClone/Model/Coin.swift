@@ -8,6 +8,4 @@
 
 import Foundation
 
-struct Coin: Codable {
-    let amount: Int
-}
+typealias Coin = Int
