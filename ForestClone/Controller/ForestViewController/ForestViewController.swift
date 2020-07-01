@@ -27,7 +27,7 @@ class ForestViewController: UIViewController {
     weak var barChartDelegate: ChartDelegate?
 
     // 1. This is too long and needs refactoring. We can use a function to automatically generate dummy data.
-    /// See `randomFocusSessionData`
+    // See `randomFocusSessionData`
 
     /*
     let completedSessions: [FocusSession] = [
