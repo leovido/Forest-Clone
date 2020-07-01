@@ -13,6 +13,7 @@ import FirebaseDatabase
 class FirebaseStorage<T: Codable>: NetworkingRequestable {
 
     typealias Model = T
+    typealias Service = DatabaseReference
 
     let referenceName: String
     let databaseReference: DatabaseReference
