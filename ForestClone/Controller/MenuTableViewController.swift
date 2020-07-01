@@ -13,13 +13,13 @@ class MenuTableViewController: UITableViewController {
     weak var homeDelegate: MenuSliderDelegate?
 
     let menuOptions: [MenuItem] = [MenuItem(name: "Forest", image: "person"),
-                                   MenuItem(name: "Timeline", image: "person"),
-                                   MenuItem(name: "Tags", image: "person"),
+                                   MenuItem(name: "Timeline", image: "clock"),
+                                   MenuItem(name: "Tags", image: "tag"),
                                    MenuItem(name: "Friend", image: "person"),
-                                   MenuItem(name: "Achievements", image: "person"),
-                                   MenuItem(name: "Store", image: "person"),
-                                   MenuItem(name: "Real Forest", image: "person"),
-                                   MenuItem(name: "News", image: "news"),
+                                   MenuItem(name: "Achievements", image: "checkmark.seal"),
+                                   MenuItem(name: "Store", image: "bag"),
+                                   MenuItem(name: "Real Forest", image: "left.arrow.circlepath"),
+                                   MenuItem(name: "News", image: "doc.text"),
                                    MenuItem(name: "Settings", image: "gear")]
 
     override func viewDidDisappear(_ animated: Bool) {
