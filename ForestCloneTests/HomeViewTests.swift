@@ -112,14 +112,14 @@ class HomeViewTests: XCTestCase {
 
     func sutNavigationSetup<T: UIViewController>() -> T {
 
-        var homeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController<FirebaseStorage<FocusSession>, FirebaseStorage<User>>
+        var homeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
 
         let navigationController = UINavigationController()
 
         UIApplication.shared.keyWindow!.rootViewController = navigationController
         navigationController.pushViewController(homeViewController, animated: false)
 
-        homeViewController = navigationController.topViewController as! HomeViewController<FirebaseStorage<FocusSession>, FirebaseStorage<User>>
+        homeViewController = navigationController.topViewController as! HomeViewController
         homeViewController.loadView()
 
         return homeViewController as! T
