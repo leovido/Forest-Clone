@@ -38,5 +38,20 @@ struct FocusSession: Codable {
 
 }
 
+extension FocusSession {
+    func encodeToJSON() throws -> [String: Any] {
+        let encoder = JSONEncoder()
+
+        let data = try encoder.encode(self)
+
+        guard let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] else {
+            return [:]
+        }
+
+        return json
+
+    }
+}
+
 // Decodable: JSON -> FocusSession
 // Encodable: FocusSession -> JSON
