@@ -116,6 +116,8 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        timerLabel.text = timeFormatted(time: 600)
+
         fetchLatestSession { success in
 
             if success {
