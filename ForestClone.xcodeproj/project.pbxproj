@@ -44,6 +44,7 @@
 		2D5F504124AD0BC9000852F1 /* SCLAlertView in Frameworks */ = {isa = PBXBuildFile; productRef = 2D5F504024AD0BC9000852F1 /* SCLAlertView */; };
 		2D5F504424AD0BFD000852F1 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 2D5F504324AD0BFD000852F1 /* Charts */; };
 		2D5F504724AD0C67000852F1 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 2D5F504624AD0C67000852F1 /* SideMenu */; };
+		2D5F504924AD1302000852F1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F504824AD1302000852F1 /* LoginViewController.swift */; };
 		2D91B368249C0C7800215756 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91B367249C0C7800215756 /* MenuTableViewController.swift */; };
 		2D91B36A249C0D1500215756 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91B369249C0D1500215756 /* MenuItem.swift */; };
 		2D91B36C249C0EE200215756 /* MenuCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91B36B249C0EE200215756 /* MenuCellTableViewCell.swift */; };
@@ -122,6 +123,7 @@
 		2D5F503324AC9E2E000852F1 /* TreeOverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeOverviewCell.swift; sourceTree = "<group>"; };
 		2D5F503524AD0534000852F1 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		2D5F503724AD0544000852F1 /* FirebaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseInterface.swift; sourceTree = "<group>"; };
+		2D5F504824AD1302000852F1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2D91B367249C0C7800215756 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		2D91B369249C0D1500215756 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		2D91B36B249C0EE200215756 /* MenuCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				2D5F503024AC9CBD000852F1 /* TreesOverviewViewController.swift */,
 				2DBE4B6224A8A2A0003E0F08 /* ForestViewController */,
 				2DBC883524A63D3E00D8DE12 /* Home */,
+				2D5F504824AD1302000852F1 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				2D5F503124AC9CBD000852F1 /* TreesOverviewViewController.swift in Sources */,
 				2D3DD333249BC27200383F23 /* NotificationScheduler.swift in Sources */,
 				2DF939F024AB745B008ACF76 /* MockFirebaseStorage.swift in Sources */,
+				2D5F504924AD1302000852F1 /* LoginViewController.swift in Sources */,
 				2D5F503824AD0544000852F1 /* FirebaseInterface.swift in Sources */,
 				2DF939EA24AAAEE9008ACF76 /* FirebaseAuthManager.swift in Sources */,
 				2D049D2F24A4F7FC00E8F1B8 /* GenericFirebaseStorage.swift in Sources */,

@@ -190,10 +190,10 @@
             </objects>
             <point key="canvasLocation" x="505.79710144927537" y="1926.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="19L-m7-BVg">
             <objects>
-                <viewController id="Eeg-Yi-6Vj" sceneMemberID="viewController">
+                <viewController id="Eeg-Yi-6Vj" customClass="LoginViewController" customModule="ForestClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="prx-r3-mfi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,6 +236,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="loginButton:" destination="Eeg-Yi-6Vj" eventType="touchUpInside" id="kpb-mY-1yh"/>
                                     <segue destination="z0P-o1-no9" kind="show" id="iEr-0x-7po"/>
                                 </connections>
                             </button>
@@ -279,6 +280,10 @@
                         <viewLayoutGuide key="safeArea" id="3WQ-KP-Wo8"/>
                     </view>
                     <navigationItem key="navigationItem" id="6On-Il-NoA"/>
+                    <connections>
+                        <outlet property="emailTextfield" destination="ef6-3R-AQb" id="jVa-Gs-Q7N"/>
+                        <outlet property="passwordTextfield" destination="emS-tK-cN5" id="b0t-Mw-FvQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ACP-Vc-enK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -516,18 +521,29 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tree" translatesAutoresizingMaskIntoConstraints="NO" id="mch-z8-qic">
-                                            <rect key="frame" x="20" y="10" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="tree" translatesAutoresizingMaskIntoConstraints="NO" id="mch-z8-qic">
+                                            <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="FHP-F5-zLU"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfS-S7-WQU">
-                                            <rect key="frame" x="78" y="25" width="316" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfS-S7-WQU">
+                                            <rect key="frame" x="58" y="25" width="336" height="19"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="jfS-S7-WQU" firstAttribute="trailing" secondItem="Ji0-8O-QPQ" secondAttribute="trailingMargin" id="FRB-hC-An1"/>
+                                        <constraint firstItem="jfS-S7-WQU" firstAttribute="top" secondItem="Ji0-8O-QPQ" secondAttribute="topMargin" constant="14" id="HDe-GF-a3F"/>
+                                        <constraint firstItem="mch-z8-qic" firstAttribute="top" secondItem="Ji0-8O-QPQ" secondAttribute="topMargin" constant="9" id="OLi-z1-Zix"/>
+                                        <constraint firstItem="mch-z8-qic" firstAttribute="leading" secondItem="Ji0-8O-QPQ" secondAttribute="leadingMargin" id="Qqc-K6-48w"/>
+                                        <constraint firstItem="jfS-S7-WQU" firstAttribute="leading" secondItem="mch-z8-qic" secondAttribute="trailing" constant="8" id="hVy-2h-mub"/>
+                                        <constraint firstItem="mch-z8-qic" firstAttribute="centerY" secondItem="Ji0-8O-QPQ" secondAttribute="centerY" id="nZN-aY-x1P"/>
+                                        <constraint firstItem="mch-z8-qic" firstAttribute="centerY" secondItem="jfS-S7-WQU" secondAttribute="centerY" id="x49-co-V9z"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
