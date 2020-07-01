@@ -52,6 +52,17 @@ extension ForestViewController: UITableViewDataSource {
         }
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        guard let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "TreesOverviewViewController") as? TreesOverviewViewController else {
+            return
+        }
+
+        if indexPath.row == 0 {
+            present(vc, animated: true, completion: nil)
+        }
+    }
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
         if indexPath.row == 0 {
