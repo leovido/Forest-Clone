@@ -7,7 +7,20 @@
 		<key>ForestClone.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>20</integer>
+			<integer>23</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2D2261D1249B6D5500DCDB5D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2D2261E7249B6D5A00DCDB5D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

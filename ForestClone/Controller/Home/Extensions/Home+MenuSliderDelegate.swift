@@ -35,26 +35,5 @@ extension HomeViewController: MenuSliderDelegate {
 
     }
 
-    @objc func menuSidebarConfiguration() {
-
-        guard let menu = storyboard!.instantiateViewController(
-            withIdentifier: "SideMenuNavigationController"
-            ) as? SideMenuNavigationController else {
-                fatalError("SideMenuNavigationController not implemented")
-        }
-
-        configureView(isSliderPresented: false)
-
-        menu.presentationStyle = .menuDissolveIn
-        menu.menuWidth = 200
-        menu.blurEffectStyle = .dark
-
-        guard let menuViewController = menu.viewControllers.first as? MenuTableViewController else {
-            return
-        }
-
-        present(menu, animated: true) {
-            menuViewController.homeDelegate = self
-        }
-    }
+    
 }

@@ -10,7 +10,7 @@ import XCTest
 import SwiftRandom
 @testable import ForestClone
 
-class ForestCloneTests: XCTestCase {
+class HomeViewTests: XCTestCase {
 
     var homeViewController: HomeViewController!
 
