@@ -14,13 +14,29 @@ extension HomeViewController {
 
          // 1. Calculate the time elapsed from the existing session if it's already started and not completed.
 
-        if self.session.status == .started {
-            let timeElapsed = Date().timeIntervalSince(self.session.date)
-            self.timerValue = Int(timeElapsed)
+        let timeElapsed = Date().timeIntervalSince(session.date.addingTimeInterval(TimeInterval(session.time)))
 
-            self.timer = self.processTimer()
+        if timeElapsed < 0 {
+            viewModel.service.update(id: session.focusSessionId, data: ["status": "completed"]) { result in
+                switch result {
+                    case .success(let json):
+                        print(json)
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                }
+            }
         } else {
-            self.timerLabel.text = self.timeFormatted(time: self.timerValue)
+            if self.session.status == .started {
+
+                timerValue = Int(timeElapsed)
+
+                timer = processTimer {
+                    self.updateTimer()
+                }
+
+            } else {
+                timerLabel.text = timeFormatted(time: timerValue)
+            }
         }
 
     }
@@ -33,33 +49,32 @@ extension HomeViewController {
         return String(format: "%02i:%02i", minutes, seconds)
     }
 
-    func processTimer() -> Timer {
+    func processTimer(with completion: @escaping () -> Void) -> Timer {
 
-        // 1. Return a new Timer with custom logic
         return Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            completion()
+        }
 
-            // 2. When it reaches 0, we show the slider again and invalidate the Timer.
-            if self.timerValue == 0 {
+    }
 
-                // 3. TODO: Present an alert with a reward
+    func updateTimer() {
 
-                self.timerLabel.text = self.timeFormatted(time: self.timerValue)
-                self.customAlertPresenter.presenter.presentSuccessAlert()
-                self.timer.invalidate()
+        if timerValue == 0 {
 
-            } else {
+            timerLabel.text = timeFormatted(time: timerValue)
+            customAlertPresenter.presenter.presentSuccessAlert()
+            timer?.invalidate()
 
-                // 5. Update the timerLabel.text
-                self.timerValue -= 1
-                self.timerLabel.text = self.timeFormatted(time: self.timerValue)
+        } else {
 
-                // 6. Update phrase every 15 seconds
+            // Update the timerLabel
+            timerValue -= 1
+            timerLabel.text = timeFormatted(time: timerValue)
 
-                if self.timerValue % 15 == 0 {
-                    self.phraseLabel.text = phrases[.default]!.randomElement()!
-                }
+            // Update phrase every 15 seconds
+            if timerValue % 15 == 0 {
+                phraseLabel.text = phrases[.default]!.randomElement()!
             }
-
         }
 
     }
