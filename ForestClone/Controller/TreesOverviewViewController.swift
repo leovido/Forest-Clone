@@ -118,7 +118,8 @@ private func randomFocusSessionData(numberOfEntries: Int) -> [FocusSession] {
 
     let todayData = Array(0..<10)
         .map({ _ in
-            FocusSession(treeId: "",
+            FocusSession(userId: AppSession.user.userId,
+                         treeId: "",
                          date: Date(timeInterval: TimeInterval.random(in: 3600...1000000),
                                     since: Date.randomWithinDaysBeforeToday(0)),
                          status: .completed,
@@ -128,7 +129,8 @@ private func randomFocusSessionData(numberOfEntries: Int) -> [FocusSession] {
 
     let monthData = Array(0..<10)
         .map({ _ in
-            FocusSession(treeId: "",
+            FocusSession(userId: AppSession.user.userId,
+                         treeId: "",
                          date: Date(timeInterval: TimeInterval.random(in: 3600...1000000),
                                     since: Date.randomWithinDaysBeforeToday(20)),
                          status: .completed,
@@ -138,7 +140,8 @@ private func randomFocusSessionData(numberOfEntries: Int) -> [FocusSession] {
 
     let randomDates = Array(0..<numberOfEntries)
         .map({ _ in
-            FocusSession(treeId: "",
+            FocusSession(userId: AppSession.user.userId,
+                         treeId: "",
                          date: Date(timeInterval: TimeInterval.random(in: 3600...1000000),
                                     since: Date.randomWithinDaysBeforeToday(200)),
                          status: .completed,
