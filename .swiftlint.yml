@@ -1,0 +1,54 @@
+indentation_width: 4
+cyclomatic_complexity:
+  warning: 5
+  error: 7
+file_length:
+  error: 1000
+function_body_length: 
+  warning: 35
+function_parameter_count: 5
+line_length:
+  error: 150
+type_body_length: 300
+variable_name:
+  min_length:
+    error: 1
+  excluded:
+    - N
+
+# whitelist_rules:
+#   - strong_iboutlet
+#   - convenience_type
+#   - empty_count
+#   - empty_string
+#   - first_where
+#   - fatal_error_message
+#   - modifier_order
+#   - toggle_bool
+#   - unavailable_function
+#   - unneeded_parentheses_in_closure_argument
+#   - xct_specific_matcher
+#   - contains_over_first_not_nil
+#   - last_where
+#   - sorted_first_last
+#   - empty_enum_arguments
+
+disabled_rules:
+  - valid_docs
+  - identifier_name
+
+line_length:
+  ignores_function_declarations: true
+  ignores_comments: true
+  ignores_interpolated_strings: true
+  ignores_urls: true
+
+force_cast: error # implicitly
+force_try:
+  severity: error # explicitly
+  
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - ForestCloneTests
+  - Pods
+
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji)

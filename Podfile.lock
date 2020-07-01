@@ -1,8 +1,4 @@
 PODS:
-  - Charts (3.5.0):
-    - Charts/Core (= 3.5.0)
-  - Charts/Core (3.5.0)
-  - CodableFirebase (0.2.1)
   - Firebase/Analytics (6.23.0):
     - Firebase/Core
   - Firebase/Auth (6.23.0):
@@ -91,25 +87,17 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
-  - SCLAlertView (0.8)
-  - SideMenu (6.4.8)
   - SwiftRandom (1.0.0)
 
 DEPENDENCIES:
-  - Charts
-  - CodableFirebase
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Database
   - MSCircularSlider
-  - SCLAlertView
-  - SideMenu
   - SwiftRandom
 
 SPEC REPOS:
   trunk:
-    - Charts
-    - CodableFirebase
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -128,13 +116,9 @@ SPEC REPOS:
     - MSCircularSlider
     - nanopb
     - PromisesObjC
-    - SCLAlertView
-    - SideMenu
     - SwiftRandom
 
 SPEC CHECKSUMS:
-  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
-  CodableFirebase: 0bf201991eeec35eb9fcd987d271ea463cf34a80
   Firebase: 585ae467b3edda6a5444e788fda6888f024d8d6f
   FirebaseAnalytics: 558f7a03d19de451093032c806f39d5f9dff096e
   FirebaseAuth: e50319ecc114acf93c2b9581e15d6604ddd7eeb2
@@ -153,10 +137,8 @@ SPEC CHECKSUMS:
   MSCircularSlider: 07fe922e6a7e05fb67e876d449e365327fdad3d1
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
-  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
-  SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
   SwiftRandom: 437275c63500ddf5a565cbd56996fb23f12cfc3d
 
-PODFILE CHECKSUM: 72144365504bff3e2bf8d502f64338d12d1651f4
+PODFILE CHECKSUM: bbf01bce4e5c7280f28daa964ce8bbb17a62a521
 
 COCOAPODS: 1.9.1

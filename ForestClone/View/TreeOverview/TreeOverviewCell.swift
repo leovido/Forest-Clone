@@ -36,7 +36,6 @@ class TreeOverviewCell: UITableViewCell {
 
 }
 
-
 extension Date {
 
     func formatDate(with format: String) -> String {

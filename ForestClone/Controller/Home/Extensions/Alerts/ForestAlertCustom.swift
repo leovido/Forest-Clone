@@ -6,7 +6,7 @@
 //  Copyright © 2020 Accent IT Services. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import SCLAlertView
 
 protocol AlertPresentable {

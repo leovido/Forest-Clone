@@ -13,7 +13,6 @@ struct TreeSpecimenManager {
     let availableTrees: [TreeId] = []
     let selectedTree: TreeSpecimen = TreeSpecimen(id: "", name: "tree", description: "", cost: 0, image: "tree")
 
-
     func updateTreeImage(with seconds: Seconds) -> UIImage {
 
         let minutes = seconds / 60

@@ -35,5 +35,4 @@ extension HomeViewController: MenuSliderDelegate {
 
     }
 
-    
 }

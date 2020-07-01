@@ -35,7 +35,10 @@ class FirebaseStorage<T: Codable>: NetworkingRequestable {
             // 2. Encode our entry. It has to conform to Codable
             let data = try JSONEncoder().encode(entry)
 
-            guard let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] else {
+            guard let json = try JSONSerialization.jsonObject(
+                with: data,
+                options: .allowFragments
+            ) as? [String: Any] else {
                 completion(false)
                 return
             }
@@ -79,7 +82,7 @@ class FirebaseStorage<T: Codable>: NetworkingRequestable {
 
         modelReference
             .child(id)
-            .updateChildValues(data) { error, dbRef in
+            .updateChildValues(data) { error, _ in
 
                 if let error = error {
                     print(error)
@@ -95,7 +98,7 @@ class FirebaseStorage<T: Codable>: NetworkingRequestable {
 
         modelReference
             .child(id)
-            .removeValue { error, dbRef in
+            .removeValue { error, _ in
 
                 if let error = error {
                     print(error.localizedDescription)
@@ -108,4 +111,3 @@ class FirebaseStorage<T: Codable>: NetworkingRequestable {
     }
 
 }
-

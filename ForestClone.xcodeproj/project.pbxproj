@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -40,7 +40,10 @@
 		2D5F503424AC9E2E000852F1 /* TreeOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F503324AC9E2E000852F1 /* TreeOverviewCell.swift */; };
 		2D5F503624AD0534000852F1 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F503524AD0534000852F1 /* NetworkingService.swift */; };
 		2D5F503824AD0544000852F1 /* FirebaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F503724AD0544000852F1 /* FirebaseInterface.swift */; };
-		2D5F503A24AD05CE000852F1 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5F503924AD05CE000852F1 /* StoreManager.swift */; };
+		2D5F503E24AD0B7D000852F1 /* CodableFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = 2D5F503D24AD0B7D000852F1 /* CodableFirebase */; };
+		2D5F504124AD0BC9000852F1 /* SCLAlertView in Frameworks */ = {isa = PBXBuildFile; productRef = 2D5F504024AD0BC9000852F1 /* SCLAlertView */; };
+		2D5F504424AD0BFD000852F1 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 2D5F504324AD0BFD000852F1 /* Charts */; };
+		2D5F504724AD0C67000852F1 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 2D5F504624AD0C67000852F1 /* SideMenu */; };
 		2D91B368249C0C7800215756 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91B367249C0C7800215756 /* MenuTableViewController.swift */; };
 		2D91B36A249C0D1500215756 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91B369249C0D1500215756 /* MenuItem.swift */; };
 		2D91B36C249C0EE200215756 /* MenuCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91B36B249C0EE200215756 /* MenuCellTableViewCell.swift */; };
@@ -119,7 +122,6 @@
 		2D5F503324AC9E2E000852F1 /* TreeOverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeOverviewCell.swift; sourceTree = "<group>"; };
 		2D5F503524AD0534000852F1 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		2D5F503724AD0544000852F1 /* FirebaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseInterface.swift; sourceTree = "<group>"; };
-		2D5F503924AD05CE000852F1 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		2D91B367249C0C7800215756 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		2D91B369249C0D1500215756 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		2D91B36B249C0EE200215756 /* MenuCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -161,7 +163,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D5F504124AD0BC9000852F1 /* SCLAlertView in Frameworks */,
+				2D5F503E24AD0B7D000852F1 /* CodableFirebase in Frameworks */,
 				50667A3D345E62B16C36C7B2 /* Pods_ForestClone.framework in Frameworks */,
+				2D5F504724AD0C67000852F1 /* SideMenu in Frameworks */,
+				2D5F504424AD0BFD000852F1 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +190,6 @@
 				2D049D2E24A4F7FC00E8F1B8 /* GenericFirebaseStorage.swift */,
 				2DF939EF24AB745B008ACF76 /* MockFirebaseStorage.swift */,
 				2DF939F624AB9F78008ACF76 /* SessionStorage.swift */,
-				2D5F503924AD05CE000852F1 /* StoreManager.swift */,
 				2DF939F424AB955F008ACF76 /* UserStorage.swift */,
 			);
 			path = Storage;
@@ -433,12 +438,19 @@
 				2D2261CF249B6D5500DCDB5D /* Frameworks */,
 				2D2261D0249B6D5500DCDB5D /* Resources */,
 				60F059B2CA79475E3C01EA4B /* [CP] Embed Pods Frameworks */,
+				2D5F503B24AD086A000852F1 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ForestClone;
+			packageProductDependencies = (
+				2D5F503D24AD0B7D000852F1 /* CodableFirebase */,
+				2D5F504024AD0BC9000852F1 /* SCLAlertView */,
+				2D5F504324AD0BFD000852F1 /* Charts */,
+				2D5F504624AD0C67000852F1 /* SideMenu */,
+			);
 			productName = ForestClone;
 			productReference = 2D2261D2249B6D5500DCDB5D /* ForestClone.app */;
 			productType = "com.apple.product-type.application";
@@ -490,6 +502,12 @@
 				Base,
 			);
 			mainGroup = 2D2261C9249B6D5500DCDB5D;
+			packageReferences = (
+				2D5F503C24AD0B7D000852F1 /* XCRemoteSwiftPackageReference "CodableFirebase" */,
+				2D5F503F24AD0BC9000852F1 /* XCRemoteSwiftPackageReference "SCLAlertView-Swift" */,
+				2D5F504224AD0BFD000852F1 /* XCRemoteSwiftPackageReference "Charts" */,
+				2D5F504524AD0C67000852F1 /* XCRemoteSwiftPackageReference "SideMenu" */,
+			);
 			productRefGroup = 2D2261D3249B6D5500DCDB5D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -525,6 +543,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2D5F503B24AD086A000852F1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
 		4C73CFD1BB0C57F9A0562402 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -643,7 +678,6 @@
 				2D049D2D24A4F62000E8F1B8 /* NetworkingRequestable.swift in Sources */,
 				2D22205824A65C6C0069100C /* ChartView.swift in Sources */,
 				2D3DD32F249BBA4F00383F23 /* Coin.swift in Sources */,
-				2D5F503A24AD05CE000852F1 /* StoreManager.swift in Sources */,
 				2D91B36C249C0EE200215756 /* MenuCellTableViewCell.swift in Sources */,
 				2D3DD339249BD03D00383F23 /* AchievementsTableViewController.swift in Sources */,
 			);
@@ -916,6 +950,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2D5F503C24AD0B7D000852F1 /* XCRemoteSwiftPackageReference "CodableFirebase" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alickbass/CodableFirebase";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.2;
+			};
+		};
+		2D5F503F24AD0BC9000852F1 /* XCRemoteSwiftPackageReference "SCLAlertView-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vikmeup/SCLAlertView-Swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		2D5F504224AD0BFD000852F1 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.5.0;
+			};
+		};
+		2D5F504524AD0C67000852F1 /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.4.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D5F503D24AD0B7D000852F1 /* CodableFirebase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D5F503C24AD0B7D000852F1 /* XCRemoteSwiftPackageReference "CodableFirebase" */;
+			productName = CodableFirebase;
+		};
+		2D5F504024AD0BC9000852F1 /* SCLAlertView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D5F503F24AD0BC9000852F1 /* XCRemoteSwiftPackageReference "SCLAlertView-Swift" */;
+			productName = SCLAlertView;
+		};
+		2D5F504324AD0BFD000852F1 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D5F504224AD0BFD000852F1 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+		2D5F504624AD0C67000852F1 /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D5F504524AD0C67000852F1 /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D2261CA249B6D5500DCDB5D /* Project object */;
 }

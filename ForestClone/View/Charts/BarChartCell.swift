@@ -50,11 +50,11 @@ class BarChartCell: UITableViewCell {
         xAxis.granularity = 1
 
         switch dateDataType {
-            case .day, .month:
+        case .day, .month:
             xAxis.labelCount = 5
-            case .week:
+        case .week:
             xAxis.labelCount = 7
-            case .year:
+        case .year:
             xAxis.labelCount = 12
         }
 

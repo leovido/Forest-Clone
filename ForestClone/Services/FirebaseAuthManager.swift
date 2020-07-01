@@ -30,13 +30,13 @@ final class FirebaseAuthManager<T: NetworkingService> {
     }
 
     func setUserListener() {
-        _ = Auth.auth().addStateDidChangeListener { (auth, user) in
+        _ = Auth.auth().addStateDidChangeListener { (_, user) in
 
             guard let user = user else {
                 return
             }
 
-            self.storage.read(id: user.uid) { userModel in
+            self.storage.read(id: user.uid) { _ in
 //                AppSession.user = userModel
             }
         }
@@ -78,7 +78,7 @@ final class FirebaseAuthManager<T: NetworkingService> {
                 print(error.localizedDescription)
             }
 
-            guard let authResult = authResult else {
+            guard authResult != nil else {
                 return
             }
 

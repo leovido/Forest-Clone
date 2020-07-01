@@ -26,12 +26,10 @@ class MockFirebaseStorage<T: Codable>: NetworkingRequestable {
     // 1. C - Create
     func create(entry: Model, completion: @escaping (Bool) -> Void) {
 
-
     }
 
     // 2. R - Read
     func read(id: String, completion: @escaping (Model) -> Void) {
-
 
     }
 
@@ -46,4 +44,3 @@ class MockFirebaseStorage<T: Codable>: NetworkingRequestable {
     }
 
 }
-

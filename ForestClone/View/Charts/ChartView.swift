@@ -12,6 +12,6 @@ import Charts
 class ChartView: BarChartView {
 
     func view() {
-        self.barData
+
     }
 }

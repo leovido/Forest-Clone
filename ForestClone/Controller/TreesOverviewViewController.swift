@@ -10,24 +10,24 @@ import UIKit
 
 class TreesOverviewViewController: UITableViewController {
 
-    let data: [Int: [FocusSession]] = [
-        0: randomFocusSessionData(numberOfEntries: 3),
-        1: randomFocusSessionData(numberOfEntries: 9),
-        2: randomFocusSessionData(numberOfEntries: 2),
-        3: randomFocusSessionData(numberOfEntries: 5)
-    ]
+//    let data: [Int: [FocusSession]] = [
+//        0: randomFocusSessionData(numberOfEntries: 3),
+//        1: randomFocusSessionData(numberOfEntries: 9),
+//        2: randomFocusSessionData(numberOfEntries: 2),
+//        3: randomFocusSessionData(numberOfEntries: 5)
+//    ]
 
-//    var data: [Int: [FocusSession]] = [:]
+    var data: [Int: [FocusSession]] = [:]
 
     let viewModel: FocusSessionViewModel = FocusSessionViewModel()
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-//        viewModel.fetchData { sessions in
-////            self.data = self.groupSessionsToData(sessions: sessions)
-//            self.tableView.reloadData()
-//        }
+        viewModel.fetchData { sessions in
+            self.data = self.groupSessionsToData(sessions: sessions)
+            self.tableView.reloadData()
+        }
 
     }
 
@@ -114,7 +114,7 @@ class TreesOverviewViewController: UITableViewController {
 
 }
 
-fileprivate func randomFocusSessionData(numberOfEntries: Int) -> [FocusSession] {
+private func randomFocusSessionData(numberOfEntries: Int) -> [FocusSession] {
 
     let todayData = Array(0..<10)
         .map({ _ in

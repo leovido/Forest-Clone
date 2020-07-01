@@ -92,7 +92,11 @@ class HomeViewController: UIViewController {
                     self.session.date = Date()
                     self.session.status = .started
 
-                    try! self.createFirebaseEntry()
+                    do {
+                        try self.createFirebaseEntry()
+                    } catch let error {
+                        print(error.localizedDescription)
+                    }
                 }
 
             })
@@ -125,7 +129,12 @@ class HomeViewController: UIViewController {
         setupNotificationCenter()
         configureTapForTreeSelection()
 
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(menuSidebarConfiguration))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "Menu",
+            style: .plain,
+            target: self,
+            action: #selector(menuSidebarConfiguration)
+        )
 
         firebaseAuthManager.setUserListener()
         firebaseAuthManager.signin(email: "test@test.com", password: "pass123") {
@@ -144,7 +153,10 @@ class HomeViewController: UIViewController {
             return
         }
 
-        viewModel.service.update(id: focusSessionId, data: ["status": FocusSession.FocusSesionStatus.completed.rawValue]) { focusSession in
+        let completed = FocusSession.FocusSesionStatus.completed.rawValue
+
+        viewModel.service.update(id: focusSessionId,
+                                 data: ["status": completed]) { _ in
             self.updateUserStorage()
         }
     }
