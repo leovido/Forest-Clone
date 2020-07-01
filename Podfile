@@ -11,6 +11,8 @@ target 'ForestClone' do
 
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+
   pod 'CodableFirebase'
 
   pod 'SCLAlertView'
