@@ -20,7 +20,8 @@ struct FocusSession: Codable {
         case cancelled
     }
 
-    var id: FocusSessionId = UUID().uuidString
+    var focusSessionId: FocusSessionId = UUID().uuidString
+    var userId: String = UUID().uuidString
     var treeId: TreeId = ""
     var date: Date = Date()
 
@@ -29,7 +30,7 @@ struct FocusSession: Codable {
     var time: Seconds = 600
 
     enum CodingKeys: String, CodingKey {
-        case id
+        case focusSessionId
         case status
         case time
         case date
